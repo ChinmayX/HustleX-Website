@@ -24,3 +24,24 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@font-face {
+  font-family: "Basement";
+  src: url("/fonts/font-basement.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Integral-Bold";
+  src: url("/fonts/IntegralCF-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PlayFair";
+  src: url("/fonts/PlayfairDisplay.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

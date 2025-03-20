@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,6 +25,48 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/logo-sm.png" />
+        <title>HustleX | Where Hustle Meets Rewards</title>
+        <meta name="" />
+        <meta
+          name="description"
+          content="Not everyone gets rewarded for moving. But then again, not everyone is you. Earn Hustle Coins for every step, every streak, every win. Redeem them for exclusive rewards. Make your fitness pay off."
+        />
+        {/* twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:card" content="summary_small_image" />
+        <meta name="twitter:site" content="@hustlexclub" />
+        <meta name="twitter:creator" content="Chinmay P Dev" />
+        <meta
+          name="twitter:title"
+          content="HustleX | Where Hustle Meets Rewards"
+        />
+        <meta
+          name="twitter:description"
+          content="Not everyone gets rewarded for moving. But then again, not everyone is you. Earn Hustle Coins for every step, every streak, every win. Redeem them for exclusive rewards. Make your fitness pay off."
+        />
+        <meta name="twitter:image" content="/hero.png" />
+        {/* facebook */}
+        <meta property="og:url" content="https://www.hustlex.club" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="HustleX | Where Hustle Meets Rewards"
+        />
+        <meta
+          property="og:description"
+          content="Not everyone gets rewarded for moving. But then again, not everyone is you. Earn Hustle Coins for every step, every streak, every win. Redeem them for exclusive rewards. Make your fitness pay off."
+        />
+        <meta property="og:image" content="/hero.png" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet"
+        ></link>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
