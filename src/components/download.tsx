@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 export default function DownloadSection() {
-  const qrUrl = "https://yourdomain.com/download"; // Replace with actual domain
+  const qrUrl = "https://hustlex.club.com/download"; // Replace with actual domain
 
   return (
     <div className="bg-black text-white flex flex-col md:flex-row items-center justify-between px-60 border-t-1 border-neutral-900">
