@@ -8,7 +8,7 @@ export default function Download() {
   const [qrUrl, setQrUrl] = useState("");
 
   useEffect(() => {
-    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    const userAgent = navigator.userAgent || navigator.vendor;
 
     // Define store URLs
     const appStoreUrl = "https://apps.apple.com/app/id6740470392"; // Replace with your App Store link
