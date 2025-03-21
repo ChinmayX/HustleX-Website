@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 
 export default function Download() {
-	const [isMobile, setIsMobile] = useState(false);
 	const [qrUrl, setQrUrl] = useState("");
 
 	useEffect(() => {
@@ -15,7 +14,6 @@ export default function Download() {
 		if (/iPhone|iPad|iPod/.test(navigator.userAgent)) window.location.href = appStoreUrl;
 		else if (/Android/.test(navigator.userAgent)) window.location.href = playStoreUrl;
 		else {
-			setIsMobile(false);
 			setQrUrl(window.location.href);
 		}
 	}, []);

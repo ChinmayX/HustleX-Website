@@ -5,8 +5,7 @@
     "scripts": {
         "dev": "next dev --turbopack",
         "prod-build": "next build",
-        "prod-start": "next start",
-        "lint": "next lint"
+        "prod-start": "next start"
     },
     "dependencies": {
         "@vercel/analytics": "^1.5.0",
@@ -23,8 +22,6 @@
         "@types/react": "^19",
         "@types/react-dom": "^19",
         "autoprefixer": "^10.4.21",
-        "eslint": "^9",
-        "eslint-config-next": "15.2.3",
         "postcss": "^8.5.3",
         "prettier": "^3.5.3",
         "typescript": "^5"

@@ -56,9 +56,9 @@ export default function RootLayout(props: Readonly<{ children: React.ReactNode }
 				<link rel="icon" href="/favicon.ico" />
 				<title>HustleX | Where Hustle Meets Rewards</title>
 			</head>
-			<body className={outfit.className}>
+			<body>
 				<IconoirProvider iconProps={{ width: 24, height: 24 }}>
-					<main>{props.children}</main>
+					<main className={outfit.className}>{props.children}</main>
 				</IconoirProvider>
 			</body>
 		</html>
