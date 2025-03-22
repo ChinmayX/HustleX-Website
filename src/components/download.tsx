@@ -13,7 +13,9 @@ export default function DownloadSection() {
 					<br />
 					The best get <span className={playfairDisplay.className}>more</span>.
 				</h1>
-				<p className="text-gray-400 text-center xl:text-left">Download HustleX and get rewarded for your grind.</p>
+				<p className="text-gray-400 text-center xl:text-left">
+					Download HustleX and get rewarded for your grind.
+				</p>
 				<div className="w-20 h-20 p-2 border-neutral-400 border-1 rounded-r-sm">
 					<Image
 						src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&color=E6E6E6&bgcolor=000000&data=${encodeURIComponent(qrUrl)}`}

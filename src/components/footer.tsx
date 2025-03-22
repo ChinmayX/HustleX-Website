@@ -27,6 +27,7 @@ export const Footer = () => {
 		<div
 			className="w-full bg-cover bg-center bg-no-repeat p-4 xl:px-20 xl:py-12 border-t-1 border-neutral-900"
 			style={{ backgroundImage: "url(/footer-bg.png)" }}
+			id="footer"
 		>
 			<div className="grid grid-cols-1 xl:grid-cols-2 gap-8 text-white">
 				<div className="flex flex-col items-center justify-between gap-2 xl:items-start ">
