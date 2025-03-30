@@ -7,11 +7,11 @@ import { Footer } from "../../components/footer";
 
 const About = () => {
 	return (
-		<div className="flex flex-col items-center w-full">
+		<div className="flex flex-col items-center w-full bg-white">
 			<div className="flex justify-between items-center py-12 w-240">
 				<Image width={180} height={54} src="/logo.png" alt="logo" />
 				<Link href="/">
-					<button className="px-6 py-3 border border-gray-800 rounded-full bg-gray-100 text-sm">
+					<button className="px-6 py-3 border border-gray-800 rounded-full bg-gray-100 text-sm text-black">
 						Back to website
 					</button>
 				</Link>
