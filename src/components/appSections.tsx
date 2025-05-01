@@ -11,20 +11,34 @@ interface StageProps {
 	progress: any;
 }
 
+const STAGES = 2;
+const stageClass =
+	"absolute w-full h-full xl:px-40 flex flex-col xl:flex-row items-center justify-between";
+
+const getTransformRange = (index: number, total: number) => {
+	const stageSize = 1 / total;
+	const start = (index - 1) * stageSize;
+
+	return {
+		opacityRange: [start, start + stageSize / 2, start + stageSize],
+		opacityOutput: index === total ? [0, 1, 1] : [0, 1, 0],
+		mockupYOutput: index === total ? [200, 0, 0] : [200, 0, -200],
+	};
+};
+
 const Stage1 = (props: StageProps) => {
-	const opacity = useTransform(props.progress, [0, 0.3, 0.5], [1, 1, 0]);
-	const mockupY = useTransform(props.progress, [0, 0.3, 0.5], [0, 0, -200]);
+	const { opacityRange, opacityOutput, mockupYOutput } = getTransformRange(1, STAGES);
+
+	const opacity = useTransform(props.progress, opacityRange, opacityOutput);
+	const mockupY = useTransform(props.progress, opacityRange, mockupYOutput);
 
 	return (
-		<motion.div
-			style={{ opacity }}
-			className="absolute w-full h-full xl:px-40 flex flex-col xl:flex-row items-center justify-between pointer-events-none"
-		>
+		<motion.div style={{ opacity }} className={`${stageClass} bg-black text-white`}>
 			<motion.div
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ duration: 0.5 }}
-				className="w-full xl:w-3/5 space-y-4 p-16 flex flex-col xl:items-start items-center sticky top-0 h-screen justify-center"
+				className="w-full xl:w-3/5 space-y-4 p-16 flex flex-col xl:items-start items-center justify-center"
 			>
 				<h1 className="text-3xl xl:text-5xl text-center xl:text-left">
 					The best do{" "}
@@ -61,19 +75,18 @@ const Stage1 = (props: StageProps) => {
 };
 
 const Stage2 = (props: StageProps) => {
-	const opacity = useTransform(props.progress, [0.5, 0.7, 1], [0, 1, 1]);
-	const mockupY = useTransform(props.progress, [0.5, 0.7, 1], [200, 0, 0]);
+	const { opacityRange, opacityOutput, mockupYOutput } = getTransformRange(2, STAGES);
+
+	const opacity = useTransform(props.progress, opacityRange, opacityOutput);
+	const mockupY = useTransform(props.progress, opacityRange, mockupYOutput);
 
 	return (
-		<motion.div
-			style={{ opacity }}
-			className="absolute w-full h-full xl:px-40 flex flex-col xl:flex-row items-center justify-between bg-white text-black pointer-events-none"
-		>
+		<motion.div style={{ opacity }} className={`${stageClass} bg-white text-black`}>
 			<motion.div
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ duration: 0.5 }}
-				className="w-full xl:w-3/5 space-y-4 p-16 flex flex-col xl:items-start items-center sticky top-0 h-screen justify-center"
+				className="w-full xl:w-3/5 space-y-4 p-16 flex flex-col xl:items-start items-center justify-center"
 			>
 				<h1
 					className={`${playfairDisplay.className} text-3xl xl:text-5xl text-center xl:text-left`}
@@ -128,14 +141,14 @@ const AppSections = () => {
 
 	const { scrollYProgress: progress } = useScroll({
 		target: ref,
-		offset: ["start start", "end end"],
+		offset: ["start end", "end end"],
 	});
-	const bgColor = useTransform(progress, [0, 0.5, 1], ["#000000", "#ffffff", "#ffffff"]);
-	const textColor = useTransform(progress, [0, 0.5, 1], ["#ffffff", "#000000", "#000000"]);
+	const bgColor = useTransform(progress, [0, 0.5, 1], ["#000000", "#000000", "#ffffff"]);
+	const textColor = useTransform(progress, [0, 0.5, 1], ["#ffffff", "#ffffff", "#000000"]);
 
 	return (
-		<div className="relative h-[200vh] border-t border-neutral-900">
-			<div ref={ref} className="relative h-[200vh]">
+		<div className="relative">
+			<div ref={ref} className="relative" style={{ height: `calc(${STAGES} * 200vh)` }}>
 				<motion.div
 					style={{ backgroundColor: bgColor, color: textColor }}
 					className="sticky top-0 h-screen w-full flex flex-col items-center justify-between px-10 xl:px-60"

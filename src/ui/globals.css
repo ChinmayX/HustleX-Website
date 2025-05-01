@@ -1,13 +1,41 @@
 @import "tailwindcss";
 
-:root {
-	--background: #ffffff;
-	--foreground: #171717;
-}
-
-@theme inline {
-	--color-background: var(--background);
-	--color-foreground: var(--foreground);
+@theme {
+	--color-background: hsl(0, 0%, 5%);
+	--color-surface: hsl(0, 0%, 10%);
+	--color-black-0: hsl(0, 0%, 0%);
+	--color-black-100: hsl(0, 0%, 2%);
+	--color-black-200: hsl(0, 0%, 4%);
+	--color-black-300: hsl(0, 0%, 8%);
+	--color-black-350: hsl(0, 0%, 12%);
+	--color-black-400: hsl(0, 0%, 16%);
+	--color-black-500: hsl(0, 0%, 32%);
+	--color-white-0: hsl(0, 0%, 100%);
+	--color-white-100: hsl(0, 0%, 98%);
+	--color-white-200: hsl(0, 0%, 96%);
+	--color-white-300: hsl(0, 0%, 92%);
+	--color-white-400: hsl(0, 0%, 84%);
+	--color-white-500: hsl(0, 0%, 68%);
+	--color-pink-100: hsl(315, 100%, 90%);
+	--color-pink-200: hsl(315, 100%, 80%);
+	--color-pink-300: hsl(315, 100%, 70%);
+	--color-pink-400: hsl(315, 100%, 60%);
+	--color-pink-500: hsl(315, 100%, 50%);
+	--color-blue-100: hsl(210, 100%, 50%);
+	--color-blue-200: hsl(217, 100%, 50%);
+	--color-blue-300: hsl(225, 100%, 50%);
+	--color-blue-400: hsl(232, 100%, 50%);
+	--color-blue-500: hsl(240, 100%, 50%);
+	--color-green-100: hsl(129, 67%, 88%);
+	--color-green-300: hsl(129, 67%, 76%);
+	--color-green-500: hsl(129, 67%, 64%);
+	--color-green-700: hsl(129, 67%, 52%);
+	--color-green-900: hsl(129, 68%, 40%);
+	--color-red-100: hsl(4, 100%, 94%);
+	--color-red-300: hsl(4, 100%, 85%);
+	--color-red-500: hsl(3, 100%, 73%);
+	--color-red-700: hsl(3, 100%, 61%);
+	--color-red-900: hsl(3, 100%, 49%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,8 +45,17 @@
 	}
 }
 
-body {
+html, body {
 	background: var(--background);
 	color: var(--foreground);
 	font-family: Outfit, sans-serif;
+}
+
+.scrollbar-hide {
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+	display: none;
 }

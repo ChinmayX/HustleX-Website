@@ -1,14 +1,8 @@
 import React from "react";
 
-
-
 import { ArrowUpRight, Instagram, Linkedin, Mail, Twitter } from "iconoir-react";
 import Image from "next/image";
 import Link from "next/link";
-
-
-
-
 
 const links = [
 	{ name: "About", href: "/about" },
@@ -29,7 +23,7 @@ const socialLinks = [
 ];
 
 export const Footer = () => (
-	<div className="w-full bg-cover bg-[url(/footer-bg.png)] bg-center bg-no-repeat p-4 xl:px-20 xl:py-12 border-t-1 border-neutral-900">
+	<div className="w-full bg-gradient-to-t from-blue-500 via-blue-800 to-black p-4 xl:px-20 xl:py-12 border-t border-neutral-900">
 		<div className="grid grid-cols-1 xl:grid-cols-2 gap-8 text-white">
 			<div className="flex flex-col items-center justify-between gap-2 xl:items-start ">
 				<Image

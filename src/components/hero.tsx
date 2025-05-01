@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { playfairDisplay } from "../ui/ui";
+import { ibmPlexMono, playfairDisplay } from "../ui/ui";
 
 const Hero = () => (
-	<div className="relative w-full h-[80vh] flex flex-col justify-around items-center bg-black border-b-2 border-neutral-900 z-0">
+	<div className="relative w-full h-[80vh] flex flex-col justify-around items-center bg-black z-0">
 		<div className="absolute w-full h-full -z-1">
 			<Image src="/hero.png" alt="Hero" fill priority />
 		</div>
@@ -26,15 +26,11 @@ const Hero = () => (
 			<br />
 			Fitness
 		</h1>
-		<h2 className="text-white text-center text-m xl:text-lg w-1/2">
+		<h2
+			className={`${ibmPlexMono.className} text-white-500 text-center text-m -mt-16 xl:text-lg w-1/2`}
+		>
 			Crafted for the dedicated...
 		</h2>
-		<Link
-			href="/download"
-			className="px-6 py-2 bg-white text-neutral-800 border border-gray-900 rounded-full"
-		>
-			unlock rewards
-		</Link>
 	</div>
 );
 export default Hero;
