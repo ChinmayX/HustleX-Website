@@ -7,7 +7,10 @@ import Link from "next/link";
 const links = [
 	{ name: "About", href: "/about" },
 	{ name: "Team", href: "/team" },
-	{ name: "Career", href: "/career" },
+	{
+		name: "Career",
+		href: "https://hustlexclub.notion.site/Career-2d32355fb69c485b92682d5627f181dd",
+	},
 	{ name: "Get access", href: "/download" },
 	{ name: "Privacy Policy", href: "/privacy" },
 	{ name: "Terms", href: "/terms" },
@@ -66,7 +69,7 @@ export const Footer = () => (
 					</div>
 				</div>
 			</div>
-			<div className="w-full flex flex-row items-end justify-between xl:justify-end">
+			<div className="w-full flex items-end justify-between xl:justify-end">
 				{Array.from({ length: Math.ceil(links.length / 4) }, (_, i) =>
 					links.slice(i * 4, i * 4 + 4),
 				).map((group, i) => (
@@ -75,6 +78,7 @@ export const Footer = () => (
 							<Link
 								key={index}
 								href={link.href}
+								target={link.href.startsWith("http") ? "_blank" : "_self"}
 								rel="noopener noreferrer"
 								className="xl:w-3/4 w-full text-sm font-medium text-white/60 uppercase hover:underline flex justify-between items-center mb-6 px-4"
 							>

@@ -8,8 +8,8 @@ import { Footer } from "../../components/footer";
 const About = () => (
 	<div className="flex flex-col items-center w-full bg-white text-justify">
 		<Back />
-		<div className="p-10 max-w-5xl mx-auto text-black">
-			<h1 className="text-4xl md:text-5xl font-bold mt-10 mb-2">Privacy Policy</h1>
+		<div className="px-10 pb-20 w-full xl:w-5xl text-black">
+			<h1 className="text-4xl font-bold mt-10 mb-2">Privacy Policy</h1>
 			<p className="mb-4 font-semibold">Effective Date: 28-06-2024</p>
 			<p className="mb-6">
 				Welcome to HustleX! Your privacy is important to us, and we are committed to

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const Back = (props: { light?: boolean }) => (
-	<div className="flex justify-between items-center h-[54] px-4 py-2 mt-12 w-5xl">
+	<div className="flex justify-between items-center h-[54] px-4 py-2 mt-12 w-full xl:w-5xl">
 		<Image
 			width={props.light ? 54 : 180}
 			height={54}
