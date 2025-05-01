@@ -11,11 +11,12 @@ import { playfairDisplay } from "../../ui/ui";
 const Team = () => {
 	const team = [
 		{ name: "Chinmay P Dev", image: "/team/team-1.png", role: "Founder" },
-		{ name: "Siddharth Praveen Bharadwaj", image: "/team/team-2.png", role: "Tech Lead" },
+		{ name: "Siddharth Bharadwaj", image: "/team/team-2.png", role: "CTO" },
+		{ name: "Siddhanth Bhatt", image: "/team/team-4.png", role: "Growth" },
 		{ name: "Samuel Villegas", image: "/team/team-3.png", role: "DevOps Engineer" },
-		{ name: "Siddhanth Bhatt", image: "/small-white.png", role: "Marketing Head" },
-		{ name: "Arsh Rawuthar", image: "/small-white.png", role: "Store Manager" },
-		{ name: "Akhil Raj", image: "/small-white.png", role: "Creative Producer" },
+		{ name: "Arsh Rawuthar", image: "/team/team-5.png", role: "Partnerships" },
+		{ name: "Akhil Raj", image: "/team/team-6.png", role: "Social media" },
+		{ name: "Karan", image: "/team/team-7.png", role: "Creative Producer" },
 	];
 	return (
 		<div className="flex flex-col items-center w-full bg-white text-black">
