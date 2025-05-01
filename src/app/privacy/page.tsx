@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Back } from "../../components/back";
 import { Footer } from "../../components/footer";
 
-const About = () => (
+const Privacy = () => (
 	<div className="flex flex-col items-center w-full bg-white text-justify">
 		<Back />
 		<div className="px-10 pb-20 w-full xl:w-5xl text-black">
@@ -23,7 +23,7 @@ const About = () => (
 				provided below.
 			</p>
 			<h2 className="text-2xl font-semibold mb-2">Data We Collect</h2>
-			<h3 className="text-lg font-semibold mb-1">Personal Information</h3>
+			<h3 className="text-lg font-semibold mb-2">Personal Information</h3>
 			<ul className="mb-4 list-disc list-inside">
 				<li>First and Last Name</li>
 				<li>Email Address</li>
@@ -31,7 +31,7 @@ const About = () => (
 				<li>Address, State, and Pin Code</li>
 				<li>Account Profile Picture (optional)</li>
 			</ul>
-			<h3 className="text-lg font-semibold mb-1">Device Permissions</h3>
+			<h3 className="text-lg font-semibold mb-2">Device Permissions</h3>
 			<ul className="mb-4 list-disc list-inside">
 				<li>
 					<strong>Camera:</strong> Required for taking photos, capturing workout posture,
@@ -67,7 +67,7 @@ const About = () => (
 					</ul>
 				</li>
 			</ul>
-			<h3 className="text-lg font-semibold mb-1">Usage Data</h3>
+			<h3 className="text-lg font-semibold mb-2">Usage Data</h3>
 			<p className="mb-6">
 				We collect information about your app usage to improve performance and personalize
 				your experience.
@@ -225,4 +225,4 @@ const About = () => (
 	</div>
 );
 
-export default About;
+export default Privacy;
