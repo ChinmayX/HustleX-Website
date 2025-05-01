@@ -12,9 +12,9 @@ const About = () => (
 			<h1 className="text-6xl md:text-5xl font-bold leading-tight text-black mt-12">
 				Building the best
 				<br />
-				<span className={`${playfairDisplay.className} text-blue-600`}>Fitness</span>{" "}
+				<span className={`${playfairDisplay.className} italic text-blue-600`}>Fitness</span>{" "}
 				experience{" "}
-				<span className={`${playfairDisplay.className} text-blue-600`}>ever.</span>
+				<span className={`${playfairDisplay.className} italic text-blue-600`}>ever.</span>
 			</h1>
 			<p className="text-lg text-justify md:text-xl text-gray-700 font-light mt-8 leading-7">
 				HustleX is a gamified fitness platform that aims to transform the way individuals

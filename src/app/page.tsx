@@ -1,11 +1,11 @@
-import DownloadSection from "../components/download";
+import AppSections from "../components/appSections";
 import Footer from "../components/footer";
 import Hero from "../components/hero";
 
 const Home = () => (
 	<div>
 		<Hero />
-		<DownloadSection />
+		<AppSections />
 		<Footer />
 	</div>
 );

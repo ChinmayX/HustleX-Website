@@ -6,7 +6,7 @@ import { playfairDisplay } from "../ui/ui";
 const Hero = () => (
 	<div className="relative w-full h-[80vh] flex flex-col justify-around items-center bg-black border-b-2 border-neutral-900 z-0">
 		<div className="absolute w-full h-full -z-1">
-			<Image src="/hero.png" alt="Hero" fill />
+			<Image src="/hero.png" alt="Hero" fill priority />
 		</div>
 		<nav className="z-10 flex items-center justify-between w-4/5 bg-neutral-700/40 bg-opacity-50 px-12 py-4 mb-12 rounded-full">
 			<Link href="/">
@@ -20,13 +20,13 @@ const Hero = () => (
 			</Link>
 		</nav>
 		<h1
-			className={`${playfairDisplay.className} text-white text-center font-bold text-5xl xl:text-7xl leading-none font-PlayFair`}
+			className={`${playfairDisplay.className} italic text-white text-center font-bold text-5xl xl:text-7xl leading-none`}
 		>
 			<span className="text-blue-600">Re</span>imagine
 			<br />
 			Fitness
 		</h1>
-		<h2 className="text-white text-center font-Outfit text-m xl:text-lg w-1/2">
+		<h2 className="text-white text-center text-m xl:text-lg w-1/2">
 			Crafted for the dedicated...
 		</h2>
 		<Link
