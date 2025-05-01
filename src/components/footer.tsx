@@ -17,18 +17,14 @@ const links = [
 
 const socialLinks = [
 	{ href: "https://twitter.com/hustlexclub", src: <Twitter /> },
-	{ href: "https://www.instagram.com/hustlex.club/", src: <Instagram /> },
+	{ href: "https://www.instagram.com/hustlex.club", src: <Instagram /> },
 	{ href: "mailto:cx@hustlex.club", src: <Mail /> },
-	{ href: "https://www.linkedin.com/company/hustlexclub/", src: <Linkedin /> },
+	{ href: "https://www.linkedin.com/company/hustlexclub", src: <Linkedin /> },
 ];
 
 export const Footer = () => {
 	return (
-		<div
-			className="w-full bg-cover bg-center bg-no-repeat p-4 xl:px-20 xl:py-12 border-t-1 border-neutral-900"
-			style={{ backgroundImage: "url(/footer-bg.png)" }}
-			id="footer"
-		>
+		<div className="w-full bg-cover bg-[url(/footer-bg.png)] bg-center bg-no-repeat p-4 xl:px-20 xl:py-12 border-t-1 border-neutral-900">
 			<div className="grid grid-cols-1 xl:grid-cols-2 gap-8 text-white">
 				<div className="flex flex-col items-center justify-between gap-2 xl:items-start ">
 					<Image
@@ -52,14 +48,21 @@ export const Footer = () => {
 						))}
 					</div>
 					<div className="flex items-center gap-4 xl:items-start flex-col">
-						<p className="text-gray-100/60 text-left">© 2025 | HustleX</p>
+						<p className="text-gray-100/60 text-left">&copy; 2025 | HustleX</p>
 						<div className="flex flex-col justify-center gap-2">
 							<p className="text-gray-100/40 text-xs xl:text-left text-center">
-								HustleX is a brand owned and operated by <br /> XELITE Studios Pvt.
-								Ltd.
+								HustleX is a brand owned and operated by
+								<br />
+								XElite Studios Pvt. Ltd.
 							</p>
-							<p className="text-gray-100/40 text-xs  xl:text-left text-center">
-								#12 Nelamangala Bangalore India
+							<p className="text-gray-100/40 text-xs xl:text-left text-center">
+								#12 Nelamangala,
+								<br />
+								Bengaluru,
+								<br />
+								Karnataka - 562123,
+								<br />
+								INDIA
 							</p>
 						</div>
 					</div>

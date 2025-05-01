@@ -49,18 +49,17 @@ export const metadata: Metadata = {
 	},
 };
 
-export default function RootLayout(props: Readonly<{ children: React.ReactNode }>) {
-	return (
-		<html lang="en">
-			<head>
-				<link rel="icon" href="/favicon.ico" />
-				<title>HustleX | Where Hustle Meets Rewards</title>
-			</head>
-			<body>
-				<IconoirProvider iconProps={{ width: 24, height: 24 }}>
-					<main className={outfit.className}>{props.children}</main>
-				</IconoirProvider>
-			</body>
-		</html>
-	);
-}
+const RootLayout = (props: Readonly<{ children: React.ReactNode }>) => (
+	<html lang="en">
+		<head>
+			<link rel="icon" href="/favicon.ico" />
+			<title>HustleX | Where Hustle Meets Rewards</title>
+		</head>
+		<body>
+			<IconoirProvider iconProps={{ width: 24, height: 24 }}>
+				<main className={outfit.className}>{props.children}</main>
+			</IconoirProvider>
+		</body>
+	</html>
+);
+export default RootLayout;

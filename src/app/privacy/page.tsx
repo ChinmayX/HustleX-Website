@@ -1,187 +1,222 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 
+import { Back } from "../../components/back";
 import { Footer } from "../../components/footer";
 
-const About = () => {
-	return (
-		<div className="flex flex-col items-center w-full bg-white">
-			<div className="flex justify-between items-center py-12 w-240">
-				<Image width={180} height={54} src="/logo.png" alt="logo" />
-				<Link href="/">
-					<button className="px-6 py-3 border border-gray-800 rounded-full bg-gray-100 text-sm text-black">
-						Back to website
-					</button>
-				</Link>
-			</div>
-			<div className="p-20 w-240 text-black">
-				<h1 className="text-6xl md:text-5xl font-bold leading-tight text-black mt-12">
-					Privacy Policy
-				</h1>
-				<p>
-					<strong>Privacy Policy</strong>
-					<br />
-					Effective Date: 28-06-2024
-				</p>
-
-				<p>
-					Welcome to Hustlex! Your privacy is important to us, and we are committed to
-					protecting your personal data. This Privacy Policy outlines how we collect, use,
-					and protect the information you provide while using our app and services.
-				</p>
-
-				<p>
-					<strong>Who We Are</strong>
-					<br />
-					Hustlex is operated by an individual based in Karnataka, India. For questions or
-					concerns regarding this policy, you can contact us at:
-					<br />- <strong>Email:</strong> social.hustlex@gmail.com
-					<br />- <strong>Phone:</strong> +91 9141196450
-				</p>
-
-				<p>
-					<strong>Data We Collect</strong>
-				</p>
-
-				<p>
-					<strong>Personal Information</strong>
-					<br />
-					When you use Hustlex, we may collect the following personal information:
-					<br />
-					- First and Last Name
-					<br />
-					- Email Address
-					<br />
-					- Phone Number
-					<br />- Address, State, and Pin Code
-				</p>
-
-				<p>
-					<strong>Device Permissions</strong>
-					<br />
-					To provide app functionality, we may request access to:
-					<br />- <strong>Camera:</strong> For features requiring image input, such as
-					progress tracking.
-					<br />- <strong>Microphone:</strong> For voice input features and communication
-					purposes.
-				</p>
-
-				<p>
-					<strong>Usage Data</strong>
-					<br />
-					We collect information about your app usage to improve performance and
-					personalize your experience.
-				</p>
-
-				<p>
-					<strong>How We Use Your Data</strong>
-					<br />
-					The data collected is used for the following purposes:
-					<br />
-					- Rewarding fitness achievements.
-					<br />
-					- Sending promotional or service-related emails (only if you opt-in).
-					<br />- Analyzing app usage and improving user experience using{" "}
-					<strong>PostHog</strong>. Learn more about their privacy practices{" "}
-					<a href="https://posthog.com/privacy" target="_blank" rel="noreferrer">
+const About = () => (
+	<div className="flex flex-col items-center w-full bg-white text-justify">
+		<Back />
+		<div className="p-10 max-w-5xl mx-auto text-black">
+			<h1 className="text-4xl md:text-5xl font-bold mt-10 mb-2">Privacy Policy</h1>
+			<p className="mb-4 font-semibold">Effective Date: 28-06-2024</p>
+			<p className="mb-6">
+				Welcome to HustleX! Your privacy is important to us, and we are committed to
+				protecting your personal data. This Privacy Policy outlines how we collect, use, and
+				protect the information you provide while using our app and services.
+			</p>
+			<h2 className="text-2xl font-semibold mb-2">Who We Are</h2>
+			<p className="mb-6">
+				HustleX is operated by XElite Studios Pvt. Ltd. based in Karnataka, India. For any
+				questions or concerns regarding this policy, please contact us at the details
+				provided below.
+			</p>
+			<h2 className="text-2xl font-semibold mb-2">Data We Collect</h2>
+			<h3 className="text-lg font-semibold mb-1">Personal Information</h3>
+			<ul className="mb-4 list-disc list-inside">
+				<li>First and Last Name</li>
+				<li>Email Address</li>
+				<li>Phone Number</li>
+				<li>Address, State, and Pin Code</li>
+				<li>Account Profile Picture (optional)</li>
+			</ul>
+			<h3 className="text-lg font-semibold mb-1">Device Permissions</h3>
+			<ul className="mb-4 list-disc list-inside">
+				<li>
+					<strong>Camera:</strong> Required for taking photos, capturing workout posture,
+					and scanning codes.
+				</li>
+				<li>
+					<strong>Microphone:</strong> Used for recording audio for speech recognition and
+					other voice-related features.
+				</li>
+				<li>
+					<strong>Fitness:</strong>
+					<ul className="ml-4 list-disc list-inside">
+						<li>
+							<strong>Steps:</strong> Needed to track the number of steps taken
+							throughout the day and monitor daily activity levels.
+						</li>
+						<li>
+							<strong>Active Calories Burned:</strong> Measures calories burned during
+							movement and exercise to help track physical activity.
+						</li>
+						<li>
+							<strong>Total Calories Burned:</strong> Determines both active and
+							resting calorie burn to help you reach your fitness goals.
+						</li>
+						<li>
+							<strong>Distance:</strong> Used to calculate the distance covered while
+							walking or running to help track your fitness progress.
+						</li>
+						<li>
+							<strong>In-App Purchases:</strong> Allows you to make purchases in the
+							store and access HustleX Premium.
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<h3 className="text-lg font-semibold mb-1">Usage Data</h3>
+			<p className="mb-6">
+				We collect information about your app usage to improve performance and personalize
+				your experience.
+			</p>
+			<h2 className="text-2xl font-semibold mb-2">How We Use Your Data</h2>
+			<ul className="mb-6 list-disc list-inside">
+				<li>Rewarding fitness achievements and tracking progress.</li>
+				<li>Sending promotional or service-related emails (only if you opt in).</li>
+				<li>
+					Analyzing app usage and improving user experience using <strong>PostHog</strong>
+					. Learn more about their privacy practices{" "}
+					<Link
+						href="https://posthog.com/privacy"
+						target="_blank"
+						rel="noreferrer"
+						className="text-blue-600 underline"
+					>
 						here
-					</a>
-					.<br />- Processing payments via <strong>Apple In-App Purchase</strong>,{" "}
-					<strong>Google Play In-App Purchase</strong>, and <strong>Razorpay</strong>.
-					<br />- Marketing and remarketing through services like{" "}
-					<strong>Google Ads</strong>, <strong>Facebook Ads</strong>, and{" "}
-					<strong>Twitter Ads</strong>.
-				</p>
-
-				<p>
-					<strong>Payment Processing</strong>
-					<br />
-					We do not store or handle your payment information directly. Payments are
-					processed securely through trusted platforms, including:
-					<br />
-					- Apple In-App Purchase
-					<br />
-					- Google Play In-App Purchase
-					<br />- Razorpay
-				</p>
-
-				<p>
-					<strong>Advertising</strong>
-					<br />
-					Hustlex does not display advertisements within the app. However, we use external
-					remarketing services to advertise on platforms like Google, Facebook, and
-					Twitter.
-				</p>
-
-				<p>
-					<strong>Your Choices</strong>
-				</p>
-
-				<p>
+					</Link>
+					.
+				</li>
+				<li>
+					Processing payments via <strong>Apple In-App Purchase</strong>,{" "}
+					<strong>Google Play Billing</strong>, <strong>RevenueCat</strong>, and{" "}
+					<strong>Cashfree Payments</strong>.
+				</li>
+				<li>
+					Marketing and remarketing through services like <strong>Google Ads</strong>,{" "}
+					<strong>Facebook Ads</strong>, and <strong>Twitter Ads</strong>.
+				</li>
+			</ul>
+			<h2 className="text-2xl font-semibold mb-2">Payment Processing</h2>
+			<p className="mb-2">
+				We do not store or handle your payment information directly. Payments are processed
+				securely through trusted platforms:
+			</p>
+			<ul className="mb-6 list-disc list-inside">
+				<li>Apple In-App Purchase</li>
+				<li>Google Play Billing</li>
+				<li>RevenueCat</li>
+				<li>Cashfree Payments</li>
+			</ul>
+			<h2 className="text-2xl font-semibold mb-2">Advertising</h2>
+			<p className="mb-6">
+				HustleX does not display advertisements within the app. However, we use external
+				remarketing services to advertise on platforms like Google, Facebook, and Twitter.
+			</p>
+			<h2 className="text-2xl font-semibold mb-2">Your Choices</h2>
+			<ul className="mb-6 list-disc list-inside">
+				<li>
 					<strong>Email Communication:</strong> You can opt-out of promotional emails at
 					any time by clicking the unsubscribe link in the email or contacting us
 					directly.
-					<br />
-					<strong>Device Permissions:</strong> You can manage app permissions for your
-					camera and microphone through your device settings.
-				</p>
-
-				<p>
-					<strong>Data Protection</strong>
-					<br />
-					We take reasonable technical and organizational measures to protect your
-					personal data from unauthorized access, misuse, or disclosure.
-				</p>
-
-				<p>
-					<strong>Third-Party Services</strong>
-					<br />
-					Hustlex integrates with third-party services for analytics and marketing
-					purposes. These services have their own privacy policies:
-					<br />- <strong>PostHog Analytics:</strong>{" "}
-					<a href="https://posthog.com/privacy" target="_blank" rel="noreferrer">
-						PostHog Privacy Policy
+				</li>
+				<li>
+					<strong>Device Permissions:</strong> You can manage app permissions through your
+					device settings. Note that disabling certain permissions may limit app
+					functionality.
+				</li>
+			</ul>
+			<h2 className="text-2xl font-semibold mb-2">Data Protection</h2>
+			<p className="mb-6">
+				We take reasonable technical and organizational measures to protect your personal
+				data from unauthorized access, misuse, or disclosure.
+			</p>
+			<h2 className="text-2xl font-semibold mb-2">Third-Party Services</h2>
+			<p className="mb-2">
+				HustleX integrates with third-party services for analytics and marketing purposes.
+				These services have their own privacy policies:
+			</p>
+			<ul className="mb-6 list-disc list-inside">
+				<li>
+					<strong>Analytics:</strong> PostHog (
+					<a
+						href="https://posthog.com/privacy"
+						target="_blank"
+						rel="noreferrer"
+						className="text-blue-600 underline"
+					>
+						Privacy Policy
 					</a>
-					<br />- <strong>Remarketing Services:</strong> Google Ads, Facebook Ads, and
-					Twitter Ads
-				</p>
-
-				<p>
-					<strong>Data Retention</strong>
-					<br />
-					We retain personal data only as long as necessary for the purposes outlined in
-					this policy or as required by law.
-				</p>
-
-				<p>
-					<strong>Children&apos;s Privacy</strong>
-					<br />
-					Hustlex is not intended for children under the age of 18. We do not knowingly
-					collect personal data from children.
-				</p>
-
-				<p>
-					<strong>Changes to This Privacy Policy</strong>
-					<br />
-					We may update this policy from time to time. Changes will be reflected on this
-					page, and we encourage you to review this policy periodically.
-				</p>
-
-				<p>
-					<strong>Contact Us</strong>
-					<br />
-					For questions or concerns about this Privacy Policy, you can contact us at:
-					<br />- <strong>Email:</strong> social.hustlex@gmail.com
-					<br />- <strong>Phone:</strong> +91 9141196450
-				</p>
-
-				<p>Thank you for using Hustlex. Stay fit, stay rewarded!</p>
-			</div>
-			<Footer />
+					)
+				</li>
+				<li>
+					<strong>Remarketing Services:</strong> Google Ads, Facebook Ads, and Twitter Ads
+				</li>
+				<li>
+					<strong>Error and Crash Reporting:</strong> Sentry (
+					<a
+						href="https://sentry.io/privacy/"
+						target="_blank"
+						rel="noreferrer"
+						className="text-blue-600 underline"
+					>
+						Privacy Policy
+					</a>
+					)
+				</li>
+				<li>
+					<strong>Payment Processing:</strong> Apple In-App Purchase, Google Play Billing,
+					RevenueCat (
+					<a
+						href="https://www.revenuecat.com/privacy"
+						target="_blank"
+						rel="noreferrer"
+						className="text-blue-600 underline"
+					>
+						Privacy Policy
+					</a>
+					), Cashfree Payments (
+					<a
+						href="https://www.cashfree.com/privacy-policy"
+						target="_blank"
+						rel="noreferrer"
+						className="text-blue-600 underline"
+					>
+						Privacy Policy
+					</a>
+					)
+				</li>
+			</ul>
+			<h2 className="text-2xl font-semibold mb-2">Data Retention</h2>
+			<p className="mb-6">
+				We retain personal data only as long as necessary for the purposes outlined in this
+				policy or as required by law.
+			</p>
+			<h2 className="text-2xl font-semibold mb-2">Children’s Privacy</h2>
+			<p className="mb-6">
+				HustleX is not intended for children under the age of 18. We do not knowingly
+				collect personal data from children. If you are a parent or guardian and believe
+				your child has provided us with personal data, please contact us immediately.
+			</p>
+			<h2 className="text-2xl font-semibold mb-2">Changes to This Privacy Policy</h2>
+			<p className="mb-6">
+				We may update this policy from time to time. Changes will be reflected on this page,
+				and we encourage you to review this policy periodically.
+			</p>
+			<h2 className="text-2xl font-semibold mb-2">Contact Us</h2>
+			<ul className="mb-6 list-disc list-inside">
+				<li>
+					<strong>Email:</strong> social.hustlex@gmail.com
+				</li>
+				<li>
+					<strong>Phone:</strong> +91 91411 96450
+				</li>
+			</ul>
 		</div>
-	);
-};
+		<Footer />
+	</div>
+);
 
 export default About;
