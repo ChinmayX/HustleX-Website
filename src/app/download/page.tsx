@@ -26,7 +26,7 @@ const Download = () => {
 					<div className="flex flex-col items-center justify-center h-full">
 						<h1 className="text-3xl font-bold mb-4">Scan to Download</h1>
 						<Image src={qrUrl} alt="QR Code" width={200} height={200} />
-						<p className="mt-4 text-gray-400">Scan with your phone to get the app.</p>
+						<p className="mt-4 text-white-500">Scan with your phone to get the app.</p>
 					</div>
 				</>
 			) : (

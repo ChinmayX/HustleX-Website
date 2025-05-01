@@ -8,13 +8,13 @@ const Hero = () => (
 		<div className="absolute w-full h-full -z-1">
 			<Image src="/hero.png" alt="Hero" fill priority />
 		</div>
-		<nav className="z-10 flex items-center justify-between w-4/5 bg-neutral-700/40 bg-opacity-50 px-12 py-4 mb-12 rounded-full">
+		<nav className="z-10 flex items-center justify-between w-4/5 bg-black-500/40 px-12 py-4 mb-12 rounded-full">
 			<Link href="/">
 				<Image src="/small-white.png" alt="Logo" width={54} height={54} />
 			</Link>
 			<Link
 				href="/download"
-				className="hidden xl:flex px-6 py-2 bg-neutral-200 text-neutral-800 border border-gray-900 rounded-full"
+				className="hidden xl:flex px-6 py-2 bg-white-300 text-black-500 border border-black-300 rounded-full"
 			>
 				get access
 			</Link>

@@ -83,7 +83,7 @@ const About = () => (
 						href="https://posthog.com/privacy"
 						target="_blank"
 						rel="noreferrer"
-						className="text-blue-600 underline"
+						className="text-blue-600"
 					>
 						here
 					</Link>
@@ -99,6 +99,12 @@ const About = () => (
 					<strong>Facebook Ads</strong>, and <strong>Twitter Ads</strong>.
 				</li>
 			</ul>
+			<h2 className="text-2xl font-semibold mb-2">Data Sharing</h2>
+			<p className="mb-6">
+				We may share your data with trusted third-party service providers who assist us in
+				operating our app or servicing you. These third parties are obligated to keep your
+				information secure and use it only for the purposes we specify.
+			</p>
 			<h2 className="text-2xl font-semibold mb-2">Payment Processing</h2>
 			<p className="mb-2">
 				We do not store or handle your payment information directly. Payments are processed
@@ -141,14 +147,14 @@ const About = () => (
 			<ul className="mb-6 list-disc list-inside">
 				<li>
 					<strong>Analytics:</strong> PostHog (
-					<a
+					<Link
 						href="https://posthog.com/privacy"
 						target="_blank"
 						rel="noreferrer"
-						className="text-blue-600 underline"
+						className="text-blue-600"
 					>
 						Privacy Policy
-					</a>
+					</Link>
 					)
 				</li>
 				<li>
@@ -156,36 +162,36 @@ const About = () => (
 				</li>
 				<li>
 					<strong>Error and Crash Reporting:</strong> Sentry (
-					<a
+					<Link
 						href="https://sentry.io/privacy/"
 						target="_blank"
 						rel="noreferrer"
-						className="text-blue-600 underline"
+						className="text-blue-600"
 					>
 						Privacy Policy
-					</a>
+					</Link>
 					)
 				</li>
 				<li>
 					<strong>Payment Processing:</strong> Apple In-App Purchase, Google Play Billing,
 					RevenueCat (
-					<a
+					<Link
 						href="https://www.revenuecat.com/privacy"
 						target="_blank"
 						rel="noreferrer"
-						className="text-blue-600 underline"
+						className="text-blue-600"
 					>
 						Privacy Policy
-					</a>
+					</Link>
 					), Cashfree Payments (
-					<a
+					<Link
 						href="https://www.cashfree.com/privacy-policy"
 						target="_blank"
 						rel="noreferrer"
-						className="text-blue-600 underline"
+						className="text-blue-600"
 					>
 						Privacy Policy
-					</a>
+					</Link>
 					)
 				</li>
 			</ul>
