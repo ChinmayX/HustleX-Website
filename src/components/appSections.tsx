@@ -25,7 +25,7 @@ const getTransformRange = (index: number, total: number) => {
 	};
 };
 
-const Stage1 = (props: StageProps) => {
+const MainFeatures = (props: StageProps) => {
 	const { opacityRange, opacityOutput, mockupYOutput } = getTransformRange(props.index, STAGES);
 
 	const opacity = useTransform(props.progress, opacityRange, opacityOutput);
@@ -50,7 +50,7 @@ const Stage1 = (props: StageProps) => {
 				animate={{ opacity: 1 }}
 				transition={{ duration: 0.5 }}
 				style={{ y: mockupY }}
-				className="w-full h-[600] -mb-36 flex items-center xl:items-start justify-between"
+				className="w-full h-[600] flex flex-col xl:flex-row items-center xl:items-start justify-between"
 			>
 				{items.map((item, index) => (
 					<div
@@ -89,7 +89,7 @@ const Stage1 = (props: StageProps) => {
 								);
 							})}
 						</div>
-						<div className="absolute top-16 w-full text-center">
+						<div className="absolute -top-4 xl:top-16 w-full text-center">
 							<h2
 								className={`${playfairDisplay.className} italic font-bold text-7xl opacity-90`}
 							>
@@ -113,7 +113,7 @@ const Stage1 = (props: StageProps) => {
 	);
 };
 
-const Stage2 = (props: StageProps) => {
+const DownloadSection = (props: StageProps) => {
 	const { opacityRange, opacityOutput, mockupYOutput } = getTransformRange(props.index, STAGES);
 
 	const opacity = useTransform(props.progress, opacityRange, opacityOutput);
@@ -161,7 +161,7 @@ const Stage2 = (props: StageProps) => {
 	);
 };
 
-const Stage3 = (props: StageProps) => {
+const Gym = (props: StageProps) => {
 	const { opacityRange, opacityOutput, mockupYOutput } = getTransformRange(props.index, STAGES);
 
 	const opacity = useTransform(props.progress, opacityRange, opacityOutput);
@@ -183,14 +183,12 @@ const Stage3 = (props: StageProps) => {
 					<span className="font-bold italic text-blue-600">monitor</span> progress.
 				</h1>
 				<p className="text-gray-400 text-center xl:text-left">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate error
-					eveniet illo illum incidunt ipsum labore nulla, obcaecati officia quis quos, rem
-					repudiandae sed sunt suscipit, unde velit veniam voluptas?
+					Track your progress and maintain your goals with HustleX.
 				</p>
 			</motion.div>
 			<motion.div
 				style={{ y: mockupY }}
-				className="xl:w-2/5 relative w-full h-[600] flex items-center justify-end"
+				className="xl:w-2/5 relative w-full h-[600] mb-8 xl:mb-0 flex items-center justify-end"
 			>
 				<motion.div
 					style={{ scale: props.progress }}
@@ -240,9 +238,9 @@ const AppSections = () => {
 					style={{ backgroundColor: bgColor, color: textColor }}
 					className="sticky top-0 h-screen w-full flex flex-col items-center justify-between px-10 xl:px-60"
 				>
-					<Stage1 index={1} progress={progress} />
-					<Stage2 index={2} progress={progress} />
-					<Stage3 index={3} progress={progress} />
+					<MainFeatures index={1} progress={progress} />
+					<DownloadSection index={2} progress={progress} />
+					<Gym index={3} progress={progress} />
 				</motion.div>
 			</div>
 		</div>

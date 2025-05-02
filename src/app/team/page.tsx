@@ -22,14 +22,14 @@ const Team = () => {
 		<div className="flex flex-col items-center w-full bg-white text-black">
 			<Back />
 			<div className="px-10 pb-20 w-full xl:w-5xl">
-				<h1 className="text-6xl font-bold leading-tight mt-12">
+				<h1 className="text-4xl xl:text-6xl font-bold leading-tight mt-12">
 					Meet our{" "}
 					<span className={`${playfairDisplay.className} italic text-blue-600`}>
 						team
 					</span>
 					.
 				</h1>
-				<div className="flex flex-wrap justify-center items-center gap-16 mt-12">
+				<div className="flex flex-wrap justify-center items-center gap-8 xl:gap-16 mt-12">
 					{team.map((member, index) => (
 						<div
 							key={index}
@@ -40,7 +40,7 @@ const Team = () => {
 								alt={member.name}
 								width={128}
 								height={128}
-								className="rounded-full w-32 h-32 object-cover"
+								className="rounded-full w-16 h-16 xl:w-32 xl:h-32 object-cover"
 							/>
 							<div className="flex flex-col items-center text-center">
 								<h2 className="text-xl font-bold">{member.name}</h2>

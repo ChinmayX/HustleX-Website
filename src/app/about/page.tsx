@@ -9,7 +9,7 @@ const About = () => (
 	<div className="flex flex-col items-center w-full bg-white text-black">
 		<Back />
 		<div className="px-10 pb-20 w-full xl:w-5xl">
-			<h1 className="text-6xl font-bold leading-tight mt-12">
+			<h1 className="text-4xl xl:text-6xl font-bold leading-tight mt-12">
 				Building the best
 				<br />
 				<span className={`${playfairDisplay.className} italic text-blue-600`}>Fitness</span>{" "}

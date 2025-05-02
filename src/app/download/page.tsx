@@ -13,8 +13,8 @@ const Download = () => {
 		const appStoreUrl = "https://apps.apple.com/app/id/123456789";
 		const playStoreUrl = "https://play.google.com/store/apps/details?id=com.hustlex.club";
 
-		if (/iPhone|iPad|iPod/.test(navigator.userAgent)) window.location.href = appStoreUrl;
-		else if (/Android/.test(navigator.userAgent)) window.location.href = playStoreUrl;
+		if (/iPhone|iPad|iPod/.test(navigator.userAgent)) window.location.replace(appStoreUrl);
+		else if (/Android/.test(navigator.userAgent)) window.location.replace(playStoreUrl);
 		else setQrUrl("/qr.png");
 	}, []);
 
@@ -30,7 +30,7 @@ const Download = () => {
 					</div>
 				</>
 			) : (
-				<h1 className="text-3xl font-bold">Redirecting...</h1>
+				<h1 className="text-3xl font-bold h-full flex items-center">Redirecting...</h1>
 			)}
 		</div>
 	);

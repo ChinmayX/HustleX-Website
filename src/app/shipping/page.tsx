@@ -3,11 +3,18 @@
 import { Back } from "../../components/back";
 import { Footer } from "../../components/footer";
 
+import { playfairDisplay } from "../../ui/ui";
+
 const Shipping = () => (
 	<div className="flex flex-col items-center w-full bg-white text-justify">
 		<Back />
 		<div className="px-10 pb-20 w-full xl:w-5xl text-black">
-			<h1 className="text-4xl font-bold mt-10 mb-2">Shipping Policy</h1>
+			<h1 className="text-4xl font-bold mt-10 mb-2 text-left xl:text-justify">
+				<span className={`${playfairDisplay.className} italic text-blue-600`}>
+					Shipping
+				</span>{" "}
+				Policy
+			</h1>
 			<p className="mb-2">
 				HustleX only takes orders within India. Any order from other nations will not be
 				fulfilled, and the debited money and Hustle Coins will be refunded to the user.

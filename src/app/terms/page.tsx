@@ -3,11 +3,19 @@
 import { Back } from "../../components/back";
 import { Footer } from "../../components/footer";
 
+import { playfairDisplay } from "../../ui/ui";
+
 const Terms = () => (
 	<div className="flex flex-col items-center w-full bg-white text-justify">
 		<Back />
 		<div className="px-10 pb-20 w-full xl:w-5xl text-black">
-			<h1 className="text-4xl font-bold mt-10 mb-2">Terms and Conditions</h1>
+			<h1 className="text-4xl font-bold mt-10 mb-2 text-left xl:text-justify">
+				<span className={`${playfairDisplay.className} italic text-blue-600`}>Terms</span>{" "}
+				and{" "}
+				<span className={`${playfairDisplay.className} italic text-blue-600`}>
+					Conditions
+				</span>
+			</h1>
 			<p className="mb-4 font-semibold">Effective Date: 28-06-2024</p>
 			<p className="mb-6">
 				Welcome to HustleX! By using our app and services, you agree to comply with these
