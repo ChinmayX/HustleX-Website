@@ -14,7 +14,7 @@ const Hero = () => (
 			</Link>
 			<Link
 				href="/download"
-				className="hidden xl:flex px-6 py-2 bg-white-300 text-black-500 border border-black-300 rounded-full"
+				className="flex px-6 py-2 bg-white-300 text-black border border-black-300 rounded-full"
 			>
 				get access
 			</Link>
