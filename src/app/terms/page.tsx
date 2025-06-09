@@ -48,7 +48,14 @@ const Terms = () => (
 					In-App Purchase, Google Play Billing, RevenueCat, and Cashfree Payments.
 				</li>
 				<li>
-					Subscription plans automatically renew unless canceled before the renewal date.
+					Subscriptions are billed monthly and will automatically renew unless canceled at
+					least 24 hours before the end of the current billing cycle. You can manage or
+					cancel your subscription anytime via your Apple ID account settings.
+				</li>
+				<li>
+					Payments are non-refundable once the billing period begins. HustleX does not
+					provide refunds for partially used periods, except as required by applicable
+					law.
 				</li>
 			</ul>
 			<h3 className="text-lg font-semibold mb-2">Rewards and Promotions</h3>
