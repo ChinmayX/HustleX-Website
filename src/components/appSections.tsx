@@ -28,12 +28,12 @@ const MainFeatures = () => {
 				whileInView={{ opacity: 1, y: 0 }}
 				viewport={{ once: true }}
 				transition={{ duration: 0.6 }}
-				className="w-full h-[600] flex flex-col xl:flex-row items-center xl:items-start justify-between"
+				className="w-full flex flex-col gap-12 xl:flex-row xl:h-[600] items-center xl:items-start justify-between"
 			>
 				{items.map((item, index) => (
 					<motion.div
 						key={index}
-						className="relative w-full h-full flex items-center justify-center transition-transform"
+						className="relative w-full h-[500] xl:h-full flex items-center justify-center transition-transform"
 						whileHover={{ scale: 1.05 }}
 					>
 						<div className="relative w-full h-full flex items-center justify-center opacity-25">
@@ -164,7 +164,7 @@ const Gym = () => (
 							key={i}
 							className="absolute rounded-full bg-white"
 							initial={{ scale: 0.25, opacity: baseOpacity }}
-							animate={{ scale: 1.5, opacity: 0 }}
+							animate={{ scale: 1.25, opacity: 0 }}
 							transition={{
 								duration: 2.5,
 								repeat: Infinity,
