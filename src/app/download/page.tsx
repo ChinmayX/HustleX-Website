@@ -11,7 +11,7 @@ const Download = () => {
 	const [qrUrl, setQrUrl] = React.useState("");
 
 	React.useEffect(() => {
-		const appStoreUrl = "https://apps.apple.com/app/id/123456789";
+		const appStoreUrl = "https://apps.apple.com/in/app/hustlex-rewards-ai-fitness/id6740470392";
 		const playStoreUrl = "https://play.google.com/store/apps/details?id=com.hustlex.club";
 
 		if (/iPhone|iPad|iPod/.test(navigator.userAgent)) window.location.replace(appStoreUrl);
