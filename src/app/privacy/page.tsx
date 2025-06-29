@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Back } from "../../components/back";
 import { Footer } from "../../components/footer";
 
-import { playfairDisplay } from "../../ui/ui";
+import { instrumentSerif, playfairDisplay } from "../../ui/ui";
 
 const Privacy = () => (
 	<div className="flex flex-col items-center w-full bg-white text-justify">
@@ -200,10 +200,20 @@ const Privacy = () => (
 					)
 				</li>
 			</ul>
-			<h2 className="text-2xl font-semibold mb-2">Data Retention</h2>
+			<h2 className="text-2xl font-semibold mb-2">Data Retention & Account Deletion</h2>
 			<p className="mb-6">
 				We retain personal data only as long as necessary for the purposes outlined in this
 				policy or as required by law.
+				<br />
+				<br />
+				Users can delete their HustleX account at any time directly from within the app via
+				the profile or settings section.
+				<br /> Once you request account deletion: Your account will be immediately marked as
+				deleted All personal data associated with your account will be permanently deleted
+				within 7 days, unless you log back in or contact us within this period to cancel the
+				deletion After the 7-day period, your data cannot be recovered.
+				<br /> If you face any issues deleting your account through the app, you can contact
+				us at social.hustlex@gmail.com to request deletion manually.
 			</p>
 			<h2 className="text-2xl font-semibold mb-2">Children’s Privacy</h2>
 			<p className="mb-6">
