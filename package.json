@@ -4,14 +4,15 @@
     "private": true,
     "scripts": {
         "dev": "next dev --turbopack",
-        "prod-build": "next build",
+        "prod-build": "next build --turbopack",
         "prod-start": "next start"
     },
     "dependencies": {
+        "@next/third-parties": "^15.4.1",
         "@vercel/analytics": "^1.5.0",
         "iconoir-react": "^7.10.1",
         "motion": "^12.9.2",
-        "next": "15.2.4",
+        "next": "^15.4.1",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
         "tailwindcss": "^4.1.5"
@@ -26,6 +27,5 @@
         "postcss": "^8.5.3",
         "prettier": "^3.5.3",
         "typescript": "^5"
-    },
-    "packageManager": "yarn@4.9.1"
+    }
 }

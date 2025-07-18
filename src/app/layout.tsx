@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 
 import "../ui/globals.css";
 
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { IconoirProvider } from "iconoir-react";
 
 import { outfit } from "../ui/ui";
@@ -14,7 +15,17 @@ const description =
 export const metadata: Metadata = {
 	title,
 	description,
-	keywords: ["hustlex", "hustle", "rewards", "fitness", "health", "gamified", "app", "gym"],
+	keywords: [
+		"hustlex",
+		"hustle",
+		"rewards",
+		"fitness",
+		"health",
+		"gamified",
+		"app",
+		"gym",
+		"club",
+	],
 	robots: "index, follow",
 	icons: "/favicon.ico",
 	creator: "XElite Studios Pvt. Ltd.",
@@ -23,7 +34,7 @@ export const metadata: Metadata = {
 	twitter: {
 		card: "summary_large_image",
 		site: "@hustlexclub",
-		creator: "@ChinmayPDev",
+		creator: "@hustlexclub",
 		title,
 		description,
 		images: { url: "/favicon.ico", alt: title },
@@ -37,8 +48,8 @@ export const metadata: Metadata = {
 	},
 	appLinks: {
 		ios: {
-			app_store_id: "123456789",
-			url: "https://apps.apple.com/app/id/123456789",
+			app_store_id: "6740470392",
+			url: "https://apps.apple.com/in/app/hustlex-rewards-ai-fitness/id6740470392",
 			app_name: "HustleX",
 		},
 		android: {
@@ -60,6 +71,7 @@ const RootLayout = (props: Readonly<{ children: React.ReactNode }>) => (
 				<main className={outfit.className}>{props.children}</main>
 			</IconoirProvider>
 		</body>
+		<GoogleAnalytics gaId="G-HLK7XTH9J3" />
 	</html>
 );
 export default RootLayout;
