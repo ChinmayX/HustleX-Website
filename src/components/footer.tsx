@@ -17,7 +17,7 @@ const links = [
 	{ name: "Get access", href: "/download" },
 	{ name: "Server Status", href: "https://status.hustlex.club" },
 	{ name: "Privacy Policy", href: "/privacy" },
-	{ name: "Terms and Conditions", href: "/terms" },
+	{ name: "Terms", href: "/terms" },
 	{ name: "Shipping Policy", href: "/shipping" },
 	{ name: "Refund Policy", href: "/refund" },
 ];
