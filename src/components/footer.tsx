@@ -15,8 +15,9 @@ const links = [
 		href: "https://hustlexclub.notion.site/Career-2d32355fb69c485b92682d5627f181dd",
 	},
 	{ name: "Get access", href: "/download" },
+	{ name: "Server Status", href: "https://status.hustlex.club" },
 	{ name: "Privacy Policy", href: "/privacy" },
-	{ name: "Terms", href: "/terms" },
+	{ name: "Terms and Conditions", href: "/terms" },
 	{ name: "Shipping Policy", href: "/shipping" },
 	{ name: "Refund Policy", href: "/refund" },
 ];
@@ -63,12 +64,12 @@ export const Footer = () => {
 					<div className="flex items-center gap-4 xl:items-start flex-col">
 						<p className="text-white/75 text-left">&copy; 2025 | HustleX</p>
 						<div className="flex flex-col justify-center gap-2">
-							<p className="text-white/50 text-xs xl:text-left text-center">
+							<p className="text-white/50 text-xs xl:text-justify text-center">
 								HustleX is a brand owned and operated by
 								<br />
 								XElite Studios Pvt. Ltd.
 							</p>
-							<p className="text-white/50 text-xs xl:text-left text-center">
+							<p className="text-white/50 text-xs xl:text-justify text-center">
 								#12 Nelamangala,
 								<br />
 								Bengaluru,
@@ -81,8 +82,8 @@ export const Footer = () => {
 					</div>
 				</div>
 				<div className="w-full flex items-end justify-between xl:justify-end">
-					{Array.from({ length: Math.ceil(links.length / 4) }, (_, i) =>
-						links.slice(i * 4, i * 4 + 4),
+					{Array.from({ length: Math.ceil(links.length / 5) }, (_, i) =>
+						links.slice(i * 5, i * 5 + 5),
 					).map((group, i) => (
 						<div key={i} className="w-full flex flex-col space-y-2 text-center xl:px-8">
 							{group.map((link, index) => (
