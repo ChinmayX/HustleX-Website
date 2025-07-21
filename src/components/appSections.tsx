@@ -13,10 +13,7 @@ const stageClass =
 const MainFeatures = () => {
 	const items = [
 		{ title: "Macros", image: "/mockup/macros.png" },
-		{
-			title: "Rewards",
-			image: "/mockup/rewards.png",
-		},
+		{ title: "Rewards", image: "/mockup/rewards.png" },
 		{ title: "Store", image: "/mockup/store.png" },
 	];
 	return (
@@ -116,7 +113,7 @@ const DownloadSection = () => (
 				</span>
 				.
 			</h1>
-			<p className="text-gray-400 text-center xl:text-left">
+			<p className="text-zinc-400 text-center xl:text-left">
 				Download HustleX and get rewarded for your grind.
 			</p>
 			<motion.div
@@ -132,6 +129,81 @@ const DownloadSection = () => (
 		</div>
 	</div>
 );
+
+const ExtraFeatures = () => {
+	const items = [
+		{ title: "Challenges", image: "/features/challenges.png" },
+		{ title: "Streaks", image: "/features/streaks.png" },
+		{ title: "Raffles", image: "/features/raffles.png" },
+		{ title: "Spin-the-Wheel", image: "/features/spin.png" },
+		{ title: "Leaderboard", image: "/features/leaderboard.png" },
+		{ title: "Buddies", image: "/features/buddies.png" },
+		{ title: "Daily Rewards", image: "/features/daily-rewards.png" },
+		{ title: "Stats", image: "/features/stats.png" },
+		{ title: "1v1 Battles", image: "/features/battle1v1.png" },
+	];
+	return (
+		<div className={`${stageClass} !py-8 bg-cover bg-[url(/grid.png)] bg-center bg-no-repeat`}>
+			<motion.div
+				initial={{ opacity: 0, y: 100 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				viewport={{ once: true }}
+				transition={{ duration: 0.6 }}
+				className="w-full space-y-4 px-16 py-8 flex flex-wrap items-center justify-center"
+			>
+				<motion.div
+					initial={{ opacity: 0, y: 100 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true }}
+					transition={{ duration: 0.6 }}
+					className="w-full space-y-4 p-12 pt-4 flex flex-col xl:items-start items-center justify-center"
+				>
+					<h1 className="w-full text-4xl xl:text-6xl text-center">
+						The{" "}
+						<span
+							className={`${playfairDisplay.className} font-bold italic text-blue-600`}
+						>
+							All-in-One
+						</span>{" "}
+						Platform for Growth
+					</h1>
+				</motion.div>
+				<div className="w-full flex flex-wrap items-center justify-center">
+					{items.map((item, index) => (
+						<motion.div
+							key={index}
+							className="w-full xl:w-1/3 h-[256] px-8 flex flex-col items-center justify-center transition-transform bg-[#0A0A0A] border border-[#525252]/25"
+						>
+							<motion.div
+								className="w-full text-center mt-8 mb-4"
+								transition={{ type: "spring", stiffness: 120 }}
+							>
+								<h2
+									className={`${playfairDisplay.className} italic font-bold text-4xl opacity-90`}
+								>
+									{item.title}
+								</h2>
+							</motion.div>
+							<motion.div
+								transition={{ type: "spring", stiffness: 100 }}
+								className="w-full h-full relative flex items-center justify-center mx-20 mb-8"
+								whileHover={{ scale: 1.05 }}
+							>
+								<Image
+									src={item.image}
+									alt={item.title}
+									fill
+									style={{ objectPosition: "center top" }}
+									className="object-contain"
+								/>
+							</motion.div>
+						</motion.div>
+					))}
+				</div>
+			</motion.div>
+		</div>
+	);
+};
 
 const Gym = () => (
 	<div className={`${stageClass} !bg-white !text-black`}>
@@ -149,7 +221,7 @@ const Gym = () => (
 				<br />
 				<span className="font-bold italic text-blue-600">monitor</span> progress.
 			</h1>
-			<p className="text-gray-400 text-center xl:text-left">
+			<p className="text-zinc-400 text-center xl:text-left">
 				Track your progress and maintain your goals with HustleX.
 			</p>
 		</motion.div>
@@ -191,6 +263,7 @@ const AppSections = () => (
 	<div className="flex flex-col w-full overflow-x-hidden">
 		<MainFeatures />
 		<DownloadSection />
+		<ExtraFeatures />
 		<Gym />
 	</div>
 );
