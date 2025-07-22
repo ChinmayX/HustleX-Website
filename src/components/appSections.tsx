@@ -99,7 +99,7 @@ const DownloadSection = () => (
 			whileInView={{ opacity: 1, y: 0 }}
 			viewport={{ once: true }}
 			transition={{ duration: 0.6 }}
-			className="w-full xl:w-3/5 space-y-4 p-16 flex flex-col xl:items-start items-center justify-center"
+			className="w-full xl:w-3/5 space-y-4 p-6 xl:p-16 flex flex-col xl:items-start items-center justify-center"
 		>
 			<h1 className="text-3xl xl:text-5xl text-center xl:text-left">
 				The best do{" "}
@@ -149,14 +149,14 @@ const ExtraFeatures = () => {
 				whileInView={{ opacity: 1, y: 0 }}
 				viewport={{ once: true }}
 				transition={{ duration: 0.6 }}
-				className="w-full space-y-4 px-16 py-8 flex flex-wrap items-center justify-center"
+				className="w-full space-y-4 xl:px-16 py-8 flex flex-wrap items-center justify-center"
 			>
 				<motion.div
 					initial={{ opacity: 0, y: 100 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
 					transition={{ duration: 0.6 }}
-					className="w-full space-y-4 p-12 pt-4 flex flex-col xl:items-start items-center justify-center"
+					className="w-full space-y-4 xl:p-12 py-4 flex flex-col xl:items-start items-center justify-center"
 				>
 					<h1 className="w-full text-4xl xl:text-6xl text-center">
 						The{" "}
@@ -172,14 +172,14 @@ const ExtraFeatures = () => {
 					{items.map((item, index) => (
 						<motion.div
 							key={index}
-							className="w-full xl:w-1/3 h-[256] px-8 flex flex-col items-center justify-center transition-transform bg-[#0A0A0A] border border-[#525252]/25"
+							className="w-full xl:w-1/3 h-[256] xl:px-8 flex flex-col items-center justify-center transition-transform bg-[#0A0A0A] border border-[#525252]/25"
 						>
 							<motion.div
 								className="w-full text-center mt-8 mb-4"
 								transition={{ type: "spring", stiffness: 120 }}
 							>
 								<h2
-									className={`${playfairDisplay.className} italic font-bold text-4xl opacity-90`}
+									className={`${playfairDisplay.className} italic font-bold text-2xl xl:text-4xl opacity-90`}
 								>
 									{item.title}
 								</h2>
@@ -212,7 +212,7 @@ const Gym = () => (
 			whileInView={{ opacity: 1, y: 0 }}
 			viewport={{ once: true }}
 			transition={{ duration: 0.6 }}
-			className="w-full xl:w-3/5 space-y-4 p-16 flex flex-col xl:items-start items-center justify-center"
+			className="w-full xl:w-3/5 space-y-4 p-6 xl:p-16 flex flex-col xl:items-start items-center justify-center"
 		>
 			<h1
 				className={`${playfairDisplay.className} text-3xl xl:text-5xl text-center xl:text-left`}
@@ -263,7 +263,7 @@ const AppSections = () => (
 	<div className="flex flex-col w-full overflow-x-hidden">
 		<MainFeatures />
 		<DownloadSection />
-		<ExtraFeatures />
+		{/*<ExtraFeatures />*/}
 		<Gym />
 	</div>
 );
