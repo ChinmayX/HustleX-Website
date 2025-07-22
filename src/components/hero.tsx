@@ -1,7 +1,6 @@
+import { ibmPlexMono, playfairDisplay } from "@/ui/fonts";
 import Image from "next/image";
 import Link from "next/link";
-
-import { ibmPlexMono, playfairDisplay } from "../ui/ui";
 
 const Hero = () => (
 	<div className="relative w-full h-[80vh] flex flex-col justify-around items-center bg-black z-0">

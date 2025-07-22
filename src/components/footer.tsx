@@ -16,6 +16,7 @@ const links = [
 	},
 	{ name: "Get access", href: "/download" },
 	{ name: "Server Status", href: "https://status.hustlex.club" },
+	{ name: "Support", href: "/support" },
 	{ name: "Privacy Policy", href: "/privacy" },
 	{ name: "Terms", href: "/terms" },
 	{ name: "Shipping Policy", href: "/shipping" },
@@ -29,7 +30,7 @@ const socialLinks = [
 	{ href: "https://www.linkedin.com/company/hustlexclub", src: <Linkedin /> },
 ];
 
-export const Footer = () => {
+export default () => {
 	const pathname = usePathname();
 	return (
 		<div
@@ -104,5 +105,3 @@ export const Footer = () => {
 		</div>
 	);
 };
-
-export default Footer;

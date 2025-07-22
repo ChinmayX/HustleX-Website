@@ -2,10 +2,9 @@
 
 import React from "react";
 
+import { playfairDisplay } from "@/ui/fonts";
 import { motion } from "motion/react";
 import Image from "next/image";
-
-import { playfairDisplay } from "../ui/ui";
 
 const stageClass =
 	"w-full flex flex-col xl:flex-row items-center justify-between px-10 xl:px-40 py-24 bg-black text-white";
@@ -262,9 +261,9 @@ const Gym = () => (
 const AppSections = () => (
 	<div className="flex flex-col w-full overflow-x-hidden">
 		<MainFeatures />
+		<Gym />
 		<DownloadSection />
 		{/*<ExtraFeatures />*/}
-		<Gym />
 	</div>
 );
 

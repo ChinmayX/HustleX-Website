@@ -1,12 +1,11 @@
 "use client";
 
+import { playfairDisplay } from "@/ui/fonts";
 import Image from "next/image";
 import Link from "next/link";
 
-import { Back } from "../../components/back";
-import { Footer } from "../../components/footer";
-
-import { playfairDisplay } from "../../ui/ui";
+import Back from "@/components/back";
+import Footer from "@/components/footer";
 
 const Team = () => {
 	const team = [

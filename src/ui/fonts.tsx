@@ -9,12 +9,6 @@ const playfairDisplay = Playfair_Display({
 const ibmPlexMono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "700"] });
 const outfit = Outfit({ subsets: ["latin"], weight: ["400", "700"] });
 const basement = localFont({ src: "../../public/fonts/Basement.woff2", weight: "400" });
+const instrumentSerif = Instrument_Serif({ subsets: ["latin"], weight: ["400"] });
 
-export const instrumentSerif = Instrument_Serif({
-	subsets: ["latin"],
-	weight: ["400"], // You can add other weights if needed
-	variable: "--font-instrument-serif", // optional if using CSS variables
-	display: "swap",
-});
-
-export { playfairDisplay, ibmPlexMono, outfit, basement };
+export { playfairDisplay, ibmPlexMono, outfit, basement, instrumentSerif };

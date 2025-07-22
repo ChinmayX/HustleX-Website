@@ -2,12 +2,11 @@ import React from "react";
 
 import type { Metadata } from "next";
 
-import "../ui/globals.css";
+import "@/ui/globals.css";
 
+import { outfit } from "@/ui/fonts";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { IconoirProvider } from "iconoir-react";
-
-import { outfit } from "../ui/ui";
 
 const title = "HustleX | Where Hustle Meets Rewards";
 const description =
