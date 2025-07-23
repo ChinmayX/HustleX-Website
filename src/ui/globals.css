@@ -52,6 +52,10 @@ body {
 	font-family: Outfit, sans-serif;
 }
 
+svg {
+	max-width: 100%;
+}
+
 .scrollbar-hide {
 	scrollbar-width: none;
 	-ms-overflow-style: none;

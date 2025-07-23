@@ -36,31 +36,62 @@ Connect your fitness tracker or app to Health Connect to sync your data with Hus
 trackers that can be connected:
 
 <div className="grid gap-4 mt-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-	{[
-		{ title: "Google Fit", href: "/support/tracker/google-fit" },
-		{ title: "Samsung Health", href: "/support/tracker/samsung-health" },
-		{ title: "Fitbit", href: "/support/tracker/fitbit" },
-		{ title: "MyFitnessPal", href: "/support/tracker/myfitnesspal" },
-		{ title: "Garmin", href: "/support/tracker/garmin" },
-		{ title: "Coros", href: "/support/tracker/coros" },
-		{ title: "Oura", href: "/support/tracker/oura" },
-		{ title: "Polar Flow", href: "/support/tracker/polar-flow" },
-	].map((card, i) => (
-		<Card
-			key={i}
-			title={card.title}
-			href={card.href}
-			className="h-full relative flex flex-col-reverse justify-between"
-		>
-			<Image
-				src={`/tracker/${card.href.split("/").pop()}.png`}
-				alt={card.title}
-				className="w-full h-32 object-contain rounded-t-lg"
-				width={400}
-				height={200}
-			/>
-		</Card>
-	))}
+	<Card title="Google Fit" href="/support/tracker/google-fit">
+		<Image src="/tracker/google-fit/google-fit.png"
+			   alt="Google Fit"
+			   className="w-full h-32 object-contain rounded-t-lg"
+			   width={400}
+			   height={200} />
+	</Card>
+	<Card title="Samsung Health" href="/support/tracker/samsung-health">
+		<Image src="/tracker/samsung-health/samsung-health.png"
+			   alt="Samsung Health"
+			   className="w-full h-32 object-contain rounded-t-lg"
+			   width={400}
+			   height={200} />
+	</Card>
+	<Card title="Fitbit" href="/support/tracker/fitbit">
+		<Image src="/tracker/fitbit/fitbit.png"
+			   alt="Fitbit"
+			   className="w-full h-32 object-contain rounded-t-lg"
+			   width={400}
+			   height={200} />
+	</Card>
+	<Card title="MyFitnessPal" href="/support/tracker/myfitnesspal">
+		<Image src="/tracker/myfitnesspal/myfitnesspal.png"
+			   alt="MyFitnessPal"
+			   className="w-full h-32 object-contain rounded-t-lg"
+			   width={400}
+			   height={200} />
+	</Card>
+	<Card title="Garmin" href="/support/tracker/garmin">
+		<Image src="/tracker/garmin/garmin.png"
+			   alt="Garmin"
+			   className="w-full h-32 object-contain rounded-t-lg"
+			   width={400}
+			   height={200} />
+	</Card>
+	<Card title="Coros" href="/support/tracker/coros">
+		<Image src="/tracker/coros/coros.png"
+			   alt="Coros"
+			   className="w-full h-32 object-contain rounded-t-lg"
+			   width={400}
+			   height={200} />
+	</Card>
+	<Card title="Oura" href="/support/tracker/oura">
+		<Image src="/tracker/oura/oura.png"
+			   alt="Oura"
+			   className="w-full h-32 object-contain rounded-t-lg"
+			   width={400}
+			   height={200} />
+	</Card>
+	<Card title="Polar Flow" href="/support/tracker/polar-flow">
+		<Image src="/tracker/polar-flow/polar-flow.png"
+			   alt="Polar Flow"
+			   className="w-full h-32 object-contain rounded-t-lg"
+			   width={400}
+			   height={200} />
+	</Card>
 </div>
 
 <Note>Is your tracker not listed? Contact us, and we'll help you connect it to Health Connect.</Note>
