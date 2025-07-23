@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export const useMDXComponents = (components: MDXComponents): MDXComponents => ({
 	h1: props => (
-		<h1 className="text-4xl font-bold mt-10 mb-4 text-left xl:text-justify">
+		<h1 className="text-4xl font-bold mt-10 mb-4 text-left xl:text-justify tracking-[0.25]">
 			{props.children}
 		</h1>
 	),
@@ -16,13 +16,13 @@ export const useMDXComponents = (components: MDXComponents): MDXComponents => ({
 		</span>
 	),
 	strong: props => <strong className="font-semibold">{props.children}</strong>,
-	h2: props => <h2 className="text-2xl font-semibold mb-2 text-black">{props.children}</h2>,
-	h3: props => <h3 className="text-lg font-semibold mb-2 text-black">{props.children}</h3>,
-	p: props => <p className="mb-4 text-black text-justify">{props.children}</p>,
+	h2: props => <h2 className="text-2xl font-semibold mb-2 text-zinc-800 tracking-[0.25]">{props.children}</h2>,
+	h3: props => <h3 className="text-lg font-semibold mb-2 lett text-zinc-800 tracking-[0.25]">{props.children}</h3>,
+	p: props => <p className="mb-4 text-zinc-800 text-justify">{props.children}</p>,
 	ol: props => (
-		<ol className="mb-4 list-decimal list-outside pl-6 text-black">{props.children}</ol>
+		<ol className="mb-4 list-decimal list-outside pl-6 text-zinc-800">{props.children}</ol>
 	),
-	ul: props => <ul className="mb-4 list-disc list-outside pl-6 text-black">{props.children}</ul>,
+	ul: props => <ul className="mb-4 list-disc list-outside pl-6 text-zinc-800">{props.children}</ul>,
 	li: props => <li className="mb-1">{props.children}</li>,
 	a: props => (
 		<Link

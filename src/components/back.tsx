@@ -12,7 +12,7 @@ export default (props: { light?: boolean }) => (
 			alt="Logo"
 		/>
 		<Link
-			href=".."
+			href="."
 			className="px-6 py-3 border border-white-500 rounded-full bg-white-100 text-sm text-black hover:cursor-pointer hover:bg-white-200 transition-colors duration-300"
 		>
 			Back

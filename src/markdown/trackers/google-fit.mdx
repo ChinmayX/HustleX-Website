@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Note } from "@/ui/markdown";
 
 # Connect Your *Tracker* to HustleX
@@ -10,6 +11,34 @@ import { Note } from "@/ui/markdown";
 - The **Health Connect** app installed. Install from [Play Store](https://play.google.com/store/apps/details?id=com.google.android.apps.healthdata)
 
 ## How to Sync
+
+<div className="grid gap-2 my-4 grid-cols-2 xs:grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+	<Image src="/tracker/google-fit/1.png"
+		   alt="Google Fit Home"
+		   className="h-[26rem] object-contain rounded-lg"
+		   width={400}
+		   height={200} />
+	<Image src="/tracker/google-fit/2.png"
+		   alt="Google Fit Profile"
+		   className="h-[26rem] object-contain rounded-lg"
+		   width={400}
+		   height={200} />
+	<Image src="/tracker/google-fit/3.png"
+		   alt="Google Fit Settings"
+		   className="h-[26rem] object-contain rounded-lg"
+		   width={400}
+		   height={200} />
+	<Image src="/tracker/google-fit/4.png"
+		   alt="Google Fit Sync with Health Connect"
+		   className="h-[26rem] object-contain rounded-lg"
+		   width={400}
+		   height={200} />
+	<Image src="/tracker/google-fit/5.png"
+		   alt="Google Fit Allow All"
+		   className="h-[26rem] object-contain rounded-lg"
+		   width={400}
+		   height={200} />
+</div>
 
 - Open the **Google Fit** app.
 
@@ -25,7 +54,7 @@ import { Note } from "@/ui/markdown";
 <Note>
 	If you don't see Health Connect listed, make sure the app is installed and up to date.
 
-	On some phones, the Health Connect app may not be visible in the app list, but it can still be accessed through the
+	On some phones, the Health Connect app may not be visible in your app list, but it can still be accessed through the
 	[Play Store](https://play.google.com/store/apps/details?id=com.google.android.apps.healthdata).
 </Note>
 

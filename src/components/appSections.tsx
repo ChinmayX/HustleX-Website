@@ -124,7 +124,7 @@ const DownloadSection = () => (
 			</motion.div>
 		</motion.div>
 		<div className="xl:w-2/5 relative w-full h-[600] flex items-center justify-end">
-			<Image src="/mockup/mockup-1.png" alt="Mockup 1" fill className="object-contain z-10" />
+			<Image src="/mockup/download.png" alt="Download" fill className="object-contain z-10" />
 		</div>
 	</div>
 );
@@ -253,7 +253,7 @@ const Gym = () => (
 					);
 				})}
 			</div>
-			<Image src="/mockup/mockup-2.png" alt="Mockup 2" fill className="object-contain z-10" />
+			<Image src="/mockup/gym.png" alt="Gym" fill className="object-contain z-10" />
 		</div>
 	</div>
 );

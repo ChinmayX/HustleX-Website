@@ -7,8 +7,8 @@ import Back from "@/components/back";
 import Footer from "@/components/footer";
 
 export const Note = (props: { children: React.ReactNode }) => (
-	<div className="border-l-4 border-blue-400 bg-blue-50 text-blue-900 p-4 my-4 rounded-md">
-		<strong className="flex items-center mb-2">
+	<div className="border-l-4 border-blue-600 bg-blue-50 text-zinc-800 p-4 my-4 rounded-md">
+		<strong className="flex items-center mb-2 text-blue-600">
 			<LightBulb width={16} height={16} className="inline mr-2" />
 			Note:
 		</strong>

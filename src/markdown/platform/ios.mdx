@@ -1,6 +1,9 @@
-import { Note } from "@/ui/markdown";
+import Image from "next/image";
 
-# Apple Health (*iOS*)
+import { Note } from "@/ui/markdown";
+import AppleHealth from "@/ui/mockups/AppleHealth";
+
+# Apple Health *(iOS)*
 
 ## Connect Your Tracker to Apple Health
 
@@ -8,26 +11,51 @@ Apple Health lets you keep all your fitness data in one place. By connecting you
 
 Most iOS fitness trackers (like Google Fit) automatically sync with Apple Health, so no additional setup is required.
 
+<AppleHealth />
+
 ## Prerequisites
 
 - An iPhone running **iOS 15 or later**.
 
-<Note>To find the software version installed on your device, go to **Settings** > **General** > **About** and look for
-	**iOS Version**.</Note>
+<Note>To find the iOS version installed on your device, go to **Settings** > **General** > **About** and look for **iOS
+	Version**.</Note>
 
 - **Apple Health** app installed. This is pre-installed on most iPhones, but you can download it from the [App Store](https://apps.apple.com/us/app/apple-health/id1242545199).
 - HustleX installed on your iPhone. Download it [here](https://hustlex.club/download).
 
 ## How to Connect
 
-- Open **Settings** on your iPhone.
-- In Settings, scroll down and tap on **Apps** > **Health**.
-- Tap on **Data Access & Devices**.
+<div className="grid gap-2 my-4 grid-cols-2 xs:grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+	<Image src="/tracker/apple-health/1.png"
+		   alt="Apple Health Profile"
+		   className="h-[26rem] object-contain rounded-lg"
+		   width={400}
+		   height={200} />
+	<Image src="/tracker/apple-health/2.png"
+		   alt="Apple Health Apps"
+		   className="h-[26rem] object-contain rounded-lg"
+		   width={400}
+		   height={200} />
+	<Image src="/tracker/apple-health/3.png"
+		   alt="Apple Health HustleX"
+		   className="h-[26rem] object-contain rounded-lg"
+		   width={400}
+		   height={200} />
+	<Image src="/tracker/apple-health/4.png"
+		   alt="Apple Health Turn On All"
+		   className="h-[26rem] object-contain rounded-lg"
+		   width={400}
+		   height={200} />
+</div>
+
+- Open **Health** on your iPhone.
+- Tap on your profile picture in the top right corner.
+- Under **Privacy**, Tap on **Apps**.
 - Find and select **HustleX** from the list of apps.
 
 <Note>If you don't see HustleX, make sure you have opened the app at least once after installing it.</Note>
 
-- Tap on **Turn on all** to allow HustleX to read your health data.
+- Tap on **Turn On All** to allow HustleX to read your health data.
 
 ## What Data is Shared?
 
