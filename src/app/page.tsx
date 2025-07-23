@@ -1,6 +1,6 @@
-import AppSections from "../components/appSections";
-import Footer from "../components/footer";
-import Hero from "../components/hero";
+import AppSections from "@/components/appSections";
+import Footer from "@/components/footer";
+import Hero from "@/components/hero";
 
 const Home = () => (
 	<div>

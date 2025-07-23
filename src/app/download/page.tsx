@@ -5,7 +5,7 @@ import React from "react";
 import { motion } from "motion/react";
 import Image from "next/image";
 
-import { Back } from "../../components/back";
+import Back from "@/components/back";
 
 const Download = () => {
 	const [qrUrl, setQrUrl] = React.useState("");

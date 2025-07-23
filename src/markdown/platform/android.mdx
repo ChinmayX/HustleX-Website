@@ -1,0 +1,80 @@
+import { Card, Note } from "@/ui/markdown";
+import Image from "next/image";
+import HealthConnect from "@/ui/mockups/HealthConnect";
+
+# Health Connect *(Android)*
+
+## Connect Your Tracker to Health Connect
+
+Health Connect lets you sync fitness data across multiple health and fitness apps. By connecting your tracker to Health Connect, you'll be able to sync steps, distance, and more with HustleX.
+
+<HealthConnect />
+
+## Prerequisites
+
+- An Android phone running **Android 10 or later**.
+
+<Note>To find your Android version, go to **Settings** > **About phone** > **Software information** > **Android
+	version**.</Note>
+
+- **Health Connect** app installed. You can download it from the [Google Play Store](https://play.google.com/store/apps/details?id=com.google.android.apps.healthdata).
+- HustleX installed on your device. Download it [here](https://hustlex.club/download).
+
+## How to Connect
+
+- Open the **Health Connect** app.
+- Tap **App permissions**.
+- Find and select **HustleX** from the list of apps.
+
+<Note>If HustleX isn't listed, make sure you've opened the app at least once after installing it.</Note>
+
+- Tap **Allow all** to give HustleX permission to read your health data.
+
+## Supported Trackers
+
+Connect your fitness tracker or app to Health Connect to sync your data with HustleX. Below are some of the popular
+trackers that can be connected:
+
+<div className="grid gap-4 mt-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+	{[
+		{ title: "Google Fit", href: "/support/tracker/google-fit" },
+		{ title: "Samsung Health", href: "/support/tracker/samsung-health" },
+		{ title: "Fitbit", href: "/support/tracker/fitbit" },
+		{ title: "MyFitnessPal", href: "/support/tracker/myfitnesspal" },
+		{ title: "Garmin", href: "/support/tracker/garmin" },
+		{ title: "Coros", href: "/support/tracker/coros" },
+		{ title: "Oura", href: "/support/tracker/oura" },
+		{ title: "Polar Flow", href: "/support/tracker/polar-flow" },
+	].map((card, i) => (
+		<Card
+			key={i}
+			title={card.title}
+			href={card.href}
+			className="h-full relative flex flex-col-reverse justify-between"
+		>
+			<Image
+				src={`/tracker/${card.href.split("/").pop()}.png`}
+				alt={card.title}
+				className="w-full h-32 object-contain rounded-t-lg"
+				width={400}
+				height={200}
+			/>
+		</Card>
+	))}
+</div>
+
+<Note>Is your tracker not listed? Contact us, and we'll help you connect it to Health Connect.</Note>
+
+## What Data is Shared?
+
+We can read:
+
+- **Steps**
+- **Active Calories Burned**
+- **Total Calories Burned**
+- **Distance**
+
+## Contact Us
+
+If you have any questions or need help, please contact us at [social.hustlex@gmail.com](mailto:social.hustlex@gmail.com)
+or [+91 91411 96450](tel:+919141196450).
