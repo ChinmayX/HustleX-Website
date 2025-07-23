@@ -1,8 +1,34 @@
-import { Card, Note } from "@/ui/markdown";
-import Image from "next/image";
+import { Note } from "@/ui/markdown";
 
-# Connect Your Tracker to *HustleX*
+# Connect Your *Tracker* to HustleX
 
 ## Google Fit
 
-Open the Google Fit app on your device and sync your data.
+### Prerequisites
+
+- The **Google Fit** app installed. Install from [Play Store](https://play.google.com/store/apps/details?id=com.google.android.apps.fitness)
+- The **Health Connect** app installed. Install from [Play Store](https://play.google.com/store/apps/details?id=com.google.android.apps.healthdata)
+
+## How to Sync
+
+- Open the **Google Fit** app.
+
+<Note>If you haven't set up Google Fit before, you will need to create a Google account or sign in with an existing one.
+	After signing in, follow the prompts to set up your profile and grant permissions.</Note>
+
+- Tap your **Profile** tab (bottom right).
+- Tap the **Settings** icon in the top right.
+- Scroll down and toggle on **Sync Fit with Health Connect**.
+- Tap **Allow all** to give Google Fit permission to write data to Health Connect.
+- Tap **Allow**.
+
+<Note>
+	If you don't see Health Connect listed, make sure the app is installed and up to date.
+
+	On some phones, the Health Connect app may not be visible in the app list, but it can still be accessed through the
+	[Play Store](https://play.google.com/store/apps/details?id=com.google.android.apps.healthdata).
+</Note>
+
+- Open the **Health Connect** app.
+- Tap **App permissions**.
+- Select **Google Fit** and confirm the following are enabled: **Steps**, **Distance**, **Active Calories Burned**, **Total Calories Burned**.

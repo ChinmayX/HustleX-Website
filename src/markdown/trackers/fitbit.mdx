@@ -1,8 +1,35 @@
-import { Card, Note } from "@/ui/markdown";
-import Image from "next/image";
+import { Note } from "@/ui/markdown";
 
-# Connect Your Tracker to *HustleX*
+# Connect Your *Tracker* to HustleX
 
 ## Fitbit
 
-Open the Fitbit app on your device and sync your data.
+### Prerequisites
+
+- The **Fitbit** app installed. Install from [Play Store](https://play.google.com/store/apps/details?id=com.fitbit.FitbitMobile)
+- The **Health Connect** app installed. Install from [Play Store](https://play.google.com/store/apps/details?id=com.google.android.apps.healthdata)
+
+## How to Sync
+
+- Open the **Fitbit** app.
+
+<Note>If you haven't set up Fitbit before, you'll need to create an account or sign in, set up a device, and grant basic
+	permissions.</Note>
+
+- Go to the **Today** tab (bottom left).
+- Tap your **Profile** icon (top left).
+- Tap your **device name**.
+- Under **Add connections**, tap **Set up Health Connect**.
+- Tap **Allow all** to give Fitbit permission to write data to Health Connect.
+- Tap **Allow**.
+
+<Note>
+	If you don't see Health Connect listed, make sure the app is installed and up to date.
+
+	On some phones, the Health Connect app may not be visible in the app list, but it can still be accessed through the
+	[Play Store](https://play.google.com/store/apps/details?id=com.google.android.apps.healthdata).
+</Note>
+
+- Open the **Health Connect** app.
+- Tap **App permissions**.
+- Select **Fitbit** and confirm the following are enabled: **Steps**, **Distance**, **Active Calories Burned**, **Total Calories Burned**.

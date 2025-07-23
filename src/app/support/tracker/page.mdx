@@ -1,13 +1,33 @@
+import Image from "next/image";
+
 import { Card, Container } from "@/ui/markdown";
 
 <Container>
 	# Select your *Platform*
 	<div className="flex flex-wrap justify-center gap-4 mt-8">
-		<Card title="Android" href="/support/tracker/android">
+		<Card className="max-w-md h-full relative flex flex-col justify-between"
+			  title="Android"
+			  href="/support/tracker/android">
 			Connect your Android device to Health Connect and sync your data with HustleX.
+			<Image
+				src="/android.png"
+				alt="Android"
+				className="w-full h-32 object-contain rounded-t-lg"
+				width={400}
+				height={200}
+			/>
 		</Card>
-		<Card title="iOS" href="/support/tracker/ios">
+		<Card className="max-w-md h-full relative flex flex-col justify-between"
+			  title="iOS"
+			  href="/support/tracker/ios">
 			Connect your iPhone to Apple Health and sync your data with HustleX.
+			<Image
+				src="/ios.png"
+				alt="iOS"
+				className="w-full h-32 object-contain rounded-t-lg"
+				width={400}
+				height={200}
+			/>
 		</Card>
 	</div>
 </Container>
