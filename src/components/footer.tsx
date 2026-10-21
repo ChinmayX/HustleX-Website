@@ -83,23 +83,20 @@ export default () => {
 					</div>
 				</div>
 				<div className="w-full flex items-end justify-between xl:justify-end">
-					{Array.from({ length: Math.ceil(links.length / 5) }, (_, i) =>
-						links.slice(i * 5, i * 5 + 5),
-					).map((group, i) => (
-						<div key={i} className="w-full flex flex-col space-y-2 text-center xl:px-8">
-							{group.map((link, index) => (
-								<Link
-									key={index}
-									href={link.href}
-									target={link.href.startsWith("http") ? "_blank" : "_self"}
-									rel="noopener noreferrer"
-									className="xl:w-3/4 w-full text-sm font-medium text-white/75 uppercase hover:underline flex justify-between items-center mb-6 px-4"
-								>
-									{link.name} <ArrowUpRight width={16} height={16} />
-								</Link>
-							))}
-						</div>
-					))}
+					<div className="w-full grid grid-cols-2 grid-rows-5 grid-flow-col gap-y-2 xl:gap-x-16 xl:px-8">
+						{links.map((link, index) => (
+							<Link
+								key={index}
+								href={link.href}
+								target={link.href.startsWith("http") ? "_blank" : "_self"}
+								rel="noopener noreferrer"
+								className="min-w-0 xl:w-3/4 w-full text-sm max-[380px]:text-xs font-medium text-white/75 uppercase text-left break-words hover:underline flex justify-between items-center gap-2 mb-6 px-4 max-[380px]:px-2"
+							>
+								<span className="min-w-0">{link.name}</span>
+								<ArrowUpRight width={16} height={16} className="shrink-0" />
+							</Link>
+						))}
+					</div>
 				</div>
 			</div>
 		</div>

@@ -1,4 +1,10 @@
-import { IBM_Plex_Mono, Instrument_Serif, Outfit, Playfair_Display } from "next/font/google";
+import {
+	IBM_Plex_Mono,
+	Instrument_Sans,
+	Instrument_Serif,
+	Outfit,
+	Playfair_Display,
+} from "next/font/google";
 import localFont from "next/font/local";
 
 const playfairDisplay = Playfair_Display({
@@ -6,8 +12,17 @@ const playfairDisplay = Playfair_Display({
 	weight: ["400", "900"],
 	style: ["normal", "italic"],
 });
-const ibmPlexMono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "700"] });
+const ibmPlexMono =IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "700"] });
 const outfit = Outfit({ subsets: ["latin"], weight: ["400", "700"] });
-const instrumentSerif = Instrument_Serif({ subsets: ["latin"], weight: ["400"] });
+const instrumentSerif = Instrument_Serif({
+	subsets: ["latin"],
+	weight: ["400"],
+	style: ["normal", "italic"],
+});
+const instrumentSans = Instrument_Sans({
+	subsets: ["latin"],
+	weight: ["400", "500"],
+	style: ["normal", "italic"],
+});
 
-export { playfairDisplay, ibmPlexMono, outfit, instrumentSerif };
+export { playfairDisplay, ibmPlexMono, outfit, instrumentSerif, instrumentSans };

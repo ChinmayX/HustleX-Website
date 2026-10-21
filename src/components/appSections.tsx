@@ -3,11 +3,15 @@
 import React from "react";
 
 import { playfairDisplay } from "@/ui/fonts";
-import { motion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 import Image from "next/image";
 
 const stageClass =
 	"w-full flex flex-col xl:flex-row items-center justify-between px-10 xl:px-40 py-24 bg-black text-white";
+
+// Everything in this section scales off --p, the phone width (320px in the Figma design).
+// Ring diameters are relative to the phone: 550 / 432 / 336 at --p = 320.
+const rings = [1.72, 1.35, 1.05];
 
 const MainFeatures = () => {
 	const items = [
@@ -15,78 +19,73 @@ const MainFeatures = () => {
 		{ title: "Rewards", image: "/mockup/rewards.png" },
 		{ title: "Store", image: "/mockup/store.png" },
 	];
+	const reduceMotion = useReducedMotion();
 	return (
 		<div
-			className={`${stageClass} !px-0 bg-gradient-to-t from-black-300 via-black-200 to-black`}
+			className="w-full overflow-hidden text-white [--p:220px] sm:[--p:260px] xl:[--p:clamp(200px,16.667vw,320px)]"
+			style={{
+				background:
+					"radial-gradient(250% 160% at 50% -60%, #050505 63%, #161617 100%)",
+			}}
 		>
-			<motion.div
-				initial={{ opacity: 0, y: 100 }}
-				whileInView={{ opacity: 1, y: 0 }}
-				viewport={{ once: true }}
-				transition={{ duration: 0.6 }}
-				className="w-full flex flex-col gap-12 xl:flex-row xl:h-[600] items-center xl:items-start justify-between"
-			>
-				{items.map((item, index) => (
-					<motion.div
-						key={index}
-						className="relative w-full h-[500] xl:h-full flex items-center justify-center transition-transform"
-						whileHover={{ scale: 1.05 }}
+			<div className="w-full max-w-[1920px] mx-auto flex flex-col xl:flex-row items-center justify-around gap-[calc(var(--p)*0.35)] xl:gap-0 pt-[calc(var(--p)*0.5)] pb-[calc(var(--p)*0.25)]">
+				{items.map((item) => (
+					<div
+						key={item.title}
+						className="relative flex flex-col items-center xl:flex-1"
 					>
-						<div className="relative w-full h-full flex items-center justify-center opacity-25">
-							{Array.from({ length: 3 }).map((_, i) => {
-								const size = 300;
-								const baseOpacity = 0.25;
-
-								return (
+						<h2
+							className={`${playfairDisplay.className} italic font-bold leading-none text-white/[0.08] text-[calc(var(--p)*0.31)] whitespace-nowrap select-none`}
+						>
+							{item.title}
+						</h2>
+						<div className="relative w-[var(--p)] aspect-[320/630] -mt-[calc(var(--p)*0.035)]">
+							<div
+								aria-hidden
+								className="absolute left-1/2 top-[calc(50%-var(--p)*0.075)] -translate-x-1/2 -translate-y-1/2 opacity-[0.08] pointer-events-none"
+							>
+								{rings.map((ratio, i) => (
 									<motion.div
-										key={i}
-										className="absolute rounded-full"
-										initial={{ scale: 0.75, opacity: baseOpacity }}
-										animate={{ scale: 1.75, opacity: 0 }}
-										transition={{
-											duration: 2.5,
-											repeat: Infinity,
-											repeatDelay: 0.5,
-											delay: i * 0.5,
-											ease: "easeOut",
-										}}
+										key={ratio}
+										className="absolute left-1/2 top-1/2 rounded-full"
 										style={{
-											width: size,
-											height: size,
-											backgroundColor: `rgba(255, 255, 255, ${baseOpacity})`,
-											boxShadow: `0 0 0 1px rgba(255, 255, 255, ${baseOpacity}), 0 0 0 2px rgba(255, 255, 255, ${baseOpacity}), 0 0 0 3px rgba(255, 255, 255, ${baseOpacity})`,
+											width: `calc(var(--p) * ${ratio})`,
+											height: `calc(var(--p) * ${ratio})`,
+											marginLeft: `calc(var(--p) * ${-ratio / 2})`,
+											marginTop: `calc(var(--p) * ${-ratio / 2})`,
+											background:
+												"radial-gradient(circle closest-side, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 100%)",
+											boxShadow: "inset 0 0 0 1px rgba(255, 255, 255, 0.6)",
+										}}
+										animate={
+											reduceMotion
+												? undefined
+												: { scale: [1, 1.06, 1], opacity: [1, 0.55, 1] }
+										}
+										transition={{
+											duration: 4,
+											repeat: Infinity,
+											ease: "easeInOut",
+											delay: (rings.length - 1 - i) * 0.5,
 										}}
 									/>
-								);
-							})}
+								))}
+							</div>
+							{/* The mockup PNG is 470x780 with the 320x630 phone at (75, 79); crop to the phone. */}
+							<div className="absolute inset-0 overflow-hidden rounded-[6.875%/3.492%]">
+								<div className="absolute left-[-23.4375%] top-[-12.54%] w-[146.875%] h-[123.81%]">
+									<Image
+										src={item.image}
+										alt={item.title}
+										fill
+										sizes="(min-width: 1280px) 470px, 330px"
+									/>
+								</div>
+							</div>
 						</div>
-						<motion.div
-							className="absolute -top-4 xl:top-16 w-full text-center"
-							whileHover={{ y: -20 }}
-							transition={{ type: "spring", stiffness: 120 }}
-						>
-							<h2
-								className={`${playfairDisplay.className} italic font-bold text-7xl opacity-90`}
-							>
-								{item.title}
-							</h2>
-						</motion.div>
-						<motion.div
-							whileHover={{ y: 20 }}
-							transition={{ type: "spring", stiffness: 100 }}
-							className="w-full h-full absolute"
-						>
-							<Image
-								src={item.image}
-								alt={item.title}
-								fill
-								style={{ objectPosition: "center top" }}
-								className="object-contain scale-75"
-							/>
-						</motion.div>
-					</motion.div>
+					</div>
 				))}
-			</motion.div>
+			</div>
 		</div>
 	);
 };
