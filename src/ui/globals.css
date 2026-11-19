@@ -38,6 +38,29 @@
 	--color-red-900: hsl(3, 100%, 49%);
 }
 
+/* Kin tokens → Tailwind utilities (bg-kin-bg, text-kin-accent, font-display…).
+   The values themselves live in src/kin/styles/kin.css so Kin owns its look. */
+@theme inline {
+	--color-kin-bg: var(--kin-bg);
+	--color-kin-raised: var(--kin-raised);
+	--color-kin-surface: var(--kin-surface);
+	--color-kin-line: var(--kin-line);
+	--color-kin-line-strong: var(--kin-line-strong);
+	--color-kin-fg: var(--kin-fg);
+	--color-kin-fg-2: var(--kin-fg-2);
+	--color-kin-fg-3: var(--kin-fg-3);
+	--color-kin-accent: var(--kin-accent);
+	--color-kin-accent-ink: var(--kin-accent-ink);
+	--color-kin-paper: var(--kin-paper);
+	--color-kin-paper-fg: var(--kin-paper-fg);
+	--color-kin-paper-fg-2: var(--kin-paper-fg-2);
+	--color-kin-paper-line: var(--kin-paper-line);
+	--font-display: var(--ff-display, ui-sans-serif), ui-sans-serif, system-ui, sans-serif;
+	--font-text: var(--ff-text, ui-sans-serif), ui-sans-serif, system-ui, sans-serif;
+	--font-mono: var(--ff-mono, ui-monospace), ui-monospace, SFMono-Regular, Menlo, monospace;
+	--ease-snap: cubic-bezier(0.2, 0.9, 0.1, 1);
+}
+
 @media (prefers-color-scheme: dark) {
 	:root {
 		--background: #0a0a0a;

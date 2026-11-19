@@ -12,6 +12,8 @@
 		"noEmit": true,
 		"paths": {
 			"@/components/*": ["src/components/*"],
+			"@/kin/*": ["src/kin/*"],
+			"@/shared/*": ["src/shared/*"],
 			"@/markdown/*": ["src/markdown/*"],
 			"@/ui/*": ["src/ui/*"]
 		},

@@ -1,0 +1,194 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   Kin design tokens. Change the signature accent in ONE place: --kin-accent.
+   Dark-first graphite, off-white text, one accent used sparingly, warm "paper"
+   sections for rhythm. Utilities are mapped in src/ui/globals.css (@theme inline).
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.kin-root {
+	/* Signature accent (TODO founder to confirm). Must stay readable on --kin-bg. */
+	--kin-accent: #c8ff2e;
+	--kin-accent-ink: #0b0b0c; /* text on accent */
+
+	--kin-bg: #0b0b0c;
+	--kin-raised: #111113;
+	--kin-surface: #18181b;
+	--kin-line: rgb(255 255 255 / 0.09);
+	--kin-line-strong: rgb(255 255 255 / 0.18);
+	--kin-fg: #f2f1ee;
+	--kin-fg-2: #a6a6a1;
+	--kin-fg-3: #85857f;
+
+	--kin-paper: #ecebe5;
+	--kin-paper-fg: #131313;
+	--kin-paper-fg-2: #57564f;
+	--kin-paper-line: rgb(0 0 0 / 0.12);
+
+	/* Chamfer size: echoes the pod's faceted, asymmetric contour. */
+	--chamfer: 14px;
+
+	background: var(--kin-bg);
+	color: var(--kin-fg);
+	font-family: var(--font-text);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+html:has(.kin-root),
+html:has(.kin-root) body {
+	background: #0b0b0c;
+	color: #f2f1ee;
+}
+
+html:has(.kin-root) {
+	scroll-padding-top: 72px;
+}
+
+.kin-root ::selection {
+	background: var(--kin-accent);
+	color: var(--kin-accent-ink);
+}
+
+/* Numbers are heroes: tabular figures everywhere we show data. */
+.kin-num {
+	font-family: var(--font-mono);
+	font-variant-numeric: tabular-nums;
+	font-feature-settings: "tnum" 1, "zero" 1;
+}
+
+/* Tiny technical label (Teenage Engineering style). */
+.kin-label {
+	font-family: var(--font-mono);
+	font-size: 11px;
+	line-height: 1.3;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+/* Asymmetric chamfer: top-left + bottom-right corners cut. */
+.kin-chamfer {
+	clip-path: polygon(
+		var(--chamfer) 0,
+		100% 0,
+		100% calc(100% - var(--chamfer)),
+		calc(100% - var(--chamfer)) 100%,
+		0 100%,
+		0 var(--chamfer)
+	);
+}
+.kin-chamfer-sm {
+	--chamfer: 8px;
+}
+
+/* Chamfered card with a 1px hairline that follows the cut corners. */
+.kin-card {
+	position: relative;
+	background: var(--kin-line);
+	padding: 1px;
+}
+.kin-card > .kin-card-inner {
+	background: var(--kin-raised);
+	height: 100%;
+}
+.kin-card,
+.kin-card > .kin-card-inner {
+	clip-path: polygon(
+		var(--chamfer) 0,
+		100% 0,
+		100% calc(100% - var(--chamfer)),
+		calc(100% - var(--chamfer)) 100%,
+		0 100%,
+		0 var(--chamfer)
+	);
+}
+
+/* Angled section edge. */
+.kin-angle-top {
+	clip-path: polygon(0 clamp(16px, 3vw, 48px), 100% 0, 100% 100%, 0 100%);
+	padding-top: clamp(16px, 3vw, 48px);
+}
+
+/* Media slot aspect ratio: mobile ratio below 768px, desktop ratio above. */
+.kin-slot {
+	aspect-ratio: var(--ar-m, var(--ar-d));
+}
+@media (min-width: 768px) {
+	.kin-slot {
+		aspect-ratio: var(--ar-d);
+	}
+}
+
+/* Empty-slot placeholder: subtle surface, thin dashed border. */
+.kin-placeholder {
+	background:
+		repeating-linear-gradient(
+			135deg,
+			transparent 0 11px,
+			color-mix(in srgb, currentColor 3%, transparent) 11px 12px
+		),
+		color-mix(in srgb, currentColor 4%, transparent);
+	outline: 1px dashed color-mix(in srgb, currentColor 22%, transparent);
+	outline-offset: -1px;
+}
+
+/* Focus states: clearly visible, accent-coloured. */
+.kin-root :focus-visible {
+	outline: 2px solid var(--kin-accent);
+	outline-offset: 3px;
+}
+.kin-root .kin-paper :focus-visible {
+	outline-color: var(--kin-paper-fg);
+}
+
+/* Snap pulse (clip-on section). */
+@keyframes kin-snap {
+	0% {
+		opacity: 0.85;
+		transform: scale(0.6);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(1.6);
+	}
+}
+.kin-snap-pulse {
+	animation: kin-snap 520ms var(--ease-snap) forwards;
+}
+
+@keyframes kin-blink {
+	50% {
+		opacity: 0.35;
+	}
+}
+.kin-live-dot {
+	animation: kin-blink 1.6s steps(2, jump-none) infinite;
+}
+
+/* Native <details> accordion polish. */
+.kin-faq summary {
+	list-style: none;
+}
+.kin-faq summary::-webkit-details-marker {
+	display: none;
+}
+.kin-faq details[open] .kin-faq-icon {
+	transform: rotate(45deg);
+}
+
+/* Honour reduced motion everywhere. Components also swap scrubs/loops for posters. */
+@media (prefers-reduced-motion: reduce) {
+	.kin-root *,
+	.kin-root *::before,
+	.kin-root *::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	html:has(.kin-root) {
+		scroll-behavior: smooth;
+	}
+}
